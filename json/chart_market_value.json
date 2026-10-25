@@ -1,0 +1,157 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Budget composition heatmap: percentage of each origin market\u2019s full-trip expenditure allocated to six reported categories. No visitor counts or spending-per-trip values. Colours are grouped into six share bands, the darkest being 40% and above.",
+  "width": 800,
+  "height": 340,
+  "config": {
+    "background": "transparent",
+    "font": "Work Sans",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "gridColor": "#e3edf2",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "labelLimit": 150,
+      "tickCount": 5,
+      "labelPadding": 6,
+      "titlePadding": 12
+    },
+    "legend": {
+      "orient": "bottom",
+      "title": null,
+      "columns": 2,
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "padding": 10,
+      "rowPadding": 6,
+      "columnPadding": 22,
+      "labelLimit": 420,
+      "titleLimit": 420,
+      "symbolType": "square",
+      "symbolSize": 170,
+      "titleFontWeight": "bold"
+    },
+    "text": {
+      "font": "Work Sans"
+    }
+  },
+  "data": {
+    "url": "data/market-categories.json"
+  },
+  "encoding": {
+    "x": {
+      "field": "category",
+      "type": "nominal",
+      "sort": [
+        "Food, drink & stay",
+        "Transport",
+        "Tours",
+        "Shopping",
+        "Entertainment",
+        "Education"
+      ],
+      "title": null,
+      "axis": {
+        "orient": "top",
+        "labelAngle": 0,
+        "labelLimit": 160,
+        "labelFontSize": 12,
+        "labelExpr": "datum.label == 'Food, drink & stay' ? ['Food, drink', '& stay'] : datum.label",
+        "labelLineHeight": 15,
+        "labelPadding": 14
+      }
+    },
+    "y": {
+      "field": "market",
+      "type": "nominal",
+      "sort": [
+        "China",
+        "UK",
+        "USA",
+        "New Zealand",
+        "India"
+      ],
+      "title": null,
+      "axis": {
+        "ticks": false,
+        "labelFontSize": 13
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "stroke": "white",
+        "strokeWidth": 1.5,
+        "cornerRadius": 4
+      },
+      "encoding": {
+        "color": {
+        "field": "share", "type": "quantitative",
+        "scale": {
+        "type": "threshold",
+        "domain": [0.1, 0.2, 0.3, 0.4],
+        "range": ["#E6F3F4", "#A9D3D9", "#5AA5B0", "#2C7B89", "#0A4F5C"]
+        },
+          "legend": {
+          "type": "gradient",
+          "title": "Share of each market’s full-trip budget",
+          "orient": "bottom",
+          "direction": "horizontal",
+          "gradientLength": 320,
+          "gradientThickness": 14,
+          "gradientStrokeColor": "#000000",
+          "gradientStrokeWidth": 0.1,
+          "values": [0, 0.1, 0.2, 0.3, 0.4],
+          "labelExpr": "datum.value >= 0.4 ? '>40%' : format(datum.value, '.0%')",
+          "labelFontSize": 12,
+          "titleLimit": 600,
+          "titlePadding": 8
+          }
+        },
+        "tooltip": [
+          {
+            "field": "market",
+            "title": "Origin market"
+          },
+          {
+            "field": "category",
+            "title": "Category"
+          },
+          {
+            "field": "share",
+            "type": "quantitative",
+            "title": "Share of full-trip spending",
+            "format": ".1%"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 14,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {
+          "field": "share",
+          "type": "quantitative",
+          "format": ".1%"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.share >= 0.30",
+            "value": "white"
+          },
+          "value": "#153F50"
+        }
+      }
+    }
+  ]
+}

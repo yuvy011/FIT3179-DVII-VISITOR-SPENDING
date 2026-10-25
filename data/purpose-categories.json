@@ -1,0 +1,352 @@
+[
+  {
+    "purpose": "Holiday",
+    "category": "Food, drink & stay",
+    "spend_m": 7370.6900399597835,
+    "spend_b": 7.370690039959784,
+    "share": 0.354327965794703,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "B8",
+    "category_order": 0
+  },
+  {
+    "purpose": "Holiday",
+    "category": "Transport",
+    "spend_m": 6818.003240493206,
+    "spend_b": 6.818003240493206,
+    "share": 0.3277588944710029,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "B5,B7",
+    "category_order": 1
+  },
+  {
+    "purpose": "Holiday",
+    "category": "Tours",
+    "spend_m": 3352.1048461297582,
+    "spend_b": 3.3521048461297585,
+    "share": 0.16114427344257226,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "B6",
+    "category_order": 2
+  },
+  {
+    "purpose": "Holiday",
+    "category": "Shopping",
+    "spend_m": 1835.1003040786827,
+    "spend_b": 1.8351003040786826,
+    "share": 0.08821797609833941,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "B9",
+    "category_order": 3
+  },
+  {
+    "purpose": "Holiday",
+    "category": "Entertainment",
+    "spend_m": 523.3182225941453,
+    "spend_b": 0.5233182225941453,
+    "share": 0.02515724854386833,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "B10",
+    "category_order": 4
+  },
+  {
+    "purpose": "Holiday",
+    "category": "Education",
+    "spend_m": 266.9303920092628,
+    "spend_b": 0.2669303920092628,
+    "share": 0.01283202824927648,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "B11",
+    "category_order": 5
+  },
+  {
+    "purpose": "Holiday",
+    "category": "Other",
+    "spend_m": 635.7392055945454,
+    "spend_b": 0.6357392055945454,
+    "share": 0.030561613400240724,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "B12",
+    "category_order": 6
+  },
+  {
+    "purpose": "Visiting friends & family",
+    "category": "Food, drink & stay",
+    "spend_m": 2800.030414101911,
+    "spend_b": 2.800030414101911,
+    "share": 0.2699607991626261,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "C8",
+    "category_order": 0
+  },
+  {
+    "purpose": "Visiting friends & family",
+    "category": "Transport",
+    "spend_m": 5243.66117874278,
+    "spend_b": 5.24366117874278,
+    "share": 0.5055598522152042,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "C5,C7",
+    "category_order": 1
+  },
+  {
+    "purpose": "Visiting friends & family",
+    "category": "Tours",
+    "spend_m": 282.6204694867218,
+    "spend_b": 0.2826204694867218,
+    "share": 0.027248435380593367,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "C6",
+    "category_order": 2
+  },
+  {
+    "purpose": "Visiting friends & family",
+    "category": "Shopping",
+    "spend_m": 1311.6437085767145,
+    "spend_b": 1.3116437085767145,
+    "share": 0.12646019200386902,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "C9",
+    "category_order": 3
+  },
+  {
+    "purpose": "Visiting friends & family",
+    "category": "Entertainment",
+    "spend_m": 222.8535936727691,
+    "spend_b": 0.2228535936727691,
+    "share": 0.02148610027275734,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "C10",
+    "category_order": 4
+  },
+  {
+    "purpose": "Visiting friends & family",
+    "category": "Education",
+    "spend_m": 217.3306408546342,
+    "spend_b": 0.2173306408546342,
+    "share": 0.02095361292940132,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "C11",
+    "category_order": 5
+  },
+  {
+    "purpose": "Visiting friends & family",
+    "category": "Other",
+    "spend_m": 293.8489010543691,
+    "spend_b": 0.2938489010543691,
+    "share": 0.028331008035546893,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "C12",
+    "category_order": 6
+  },
+  {
+    "purpose": "Business",
+    "category": "Food, drink & stay",
+    "spend_m": 1299.8174822561582,
+    "spend_b": 1.2998174822561581,
+    "share": 0.34888232058035906,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "D8",
+    "category_order": 0
+  },
+  {
+    "purpose": "Business",
+    "category": "Transport",
+    "spend_m": 1700.1843981215882,
+    "spend_b": 1.7001843981215883,
+    "share": 0.45634428396946614,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "D5,D7",
+    "category_order": 1
+  },
+  {
+    "purpose": "Business",
+    "category": "Tours",
+    "spend_m": 245.18740704646882,
+    "spend_b": 0.24518740704646882,
+    "share": 0.06581043316864332,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "D6",
+    "category_order": 2
+  },
+  {
+    "purpose": "Business",
+    "category": "Shopping",
+    "spend_m": 229.72380793678835,
+    "spend_b": 0.22972380793678834,
+    "share": 0.061659868635117146,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "D9",
+    "category_order": 3
+  },
+  {
+    "purpose": "Business",
+    "category": "Entertainment",
+    "spend_m": 24.325914612639785,
+    "spend_b": 0.024325914612639787,
+    "share": 0.006529287116192906,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "D10",
+    "category_order": 4
+  },
+  {
+    "purpose": "Business",
+    "category": "Education",
+    "spend_m": 45.41769481596289,
+    "spend_b": 0.04541769481596289,
+    "share": 0.012190504420128255,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "D11",
+    "category_order": 5
+  },
+  {
+    "purpose": "Business",
+    "category": "Other",
+    "spend_m": 181.0049455168243,
+    "spend_b": 0.1810049455168243,
+    "share": 0.048583302110092805,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "D12",
+    "category_order": 6
+  },
+  {
+    "purpose": "Education",
+    "category": "Food, drink & stay",
+    "spend_m": 5623.8159757382955,
+    "spend_b": 5.623815975738295,
+    "share": 0.34145229572702096,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "E8",
+    "category_order": 0
+  },
+  {
+    "purpose": "Education",
+    "category": "Transport",
+    "spend_m": 1387.542299090896,
+    "spend_b": 1.387542299090896,
+    "share": 0.08424520032071947,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "E5,E7",
+    "category_order": 1
+  },
+  {
+    "purpose": "Education",
+    "category": "Tours",
+    "spend_m": 113.77752410914655,
+    "spend_b": 0.11377752410914656,
+    "share": 0.0069080490856752086,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "E6",
+    "category_order": 2
+  },
+  {
+    "purpose": "Education",
+    "category": "Shopping",
+    "spend_m": 791.9996186625945,
+    "spend_b": 0.7919996186625945,
+    "share": 0.048086581988800926,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "E9",
+    "category_order": 3
+  },
+  {
+    "purpose": "Education",
+    "category": "Entertainment",
+    "spend_m": 187.2550147068422,
+    "spend_b": 0.1872550147068422,
+    "share": 0.01136926509222316,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "E10",
+    "category_order": 4
+  },
+  {
+    "purpose": "Education",
+    "category": "Education",
+    "spend_m": 7815.849123637366,
+    "spend_b": 7.815849123637365,
+    "share": 0.474542488202888,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "E11",
+    "category_order": 5
+  },
+  {
+    "purpose": "Education",
+    "category": "Other",
+    "spend_m": 550.0435439650701,
+    "spend_b": 0.55004354396507,
+    "share": 0.033396119582672426,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "E12",
+    "category_order": 6
+  },
+  {
+    "purpose": "Other",
+    "category": "Food, drink & stay",
+    "spend_m": 3142.581637335311,
+    "spend_b": 3.142581637335311,
+    "share": 0.506485607727662,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "F8",
+    "category_order": 0
+  },
+  {
+    "purpose": "Other",
+    "category": "Transport",
+    "spend_m": 1500.465455594643,
+    "spend_b": 1.5004654555946428,
+    "share": 0.2418279764390186,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "F5,F7",
+    "category_order": 1
+  },
+  {
+    "purpose": "Other",
+    "category": "Tours",
+    "spend_m": 85.41982239865744,
+    "spend_b": 0.08541982239865745,
+    "share": 0.01376699658191147,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "F6",
+    "category_order": 2
+  },
+  {
+    "purpose": "Other",
+    "category": "Shopping",
+    "spend_m": 496.8532290082732,
+    "spend_b": 0.4968532290082732,
+    "share": 0.08007715906438226,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "F9",
+    "category_order": 3
+  },
+  {
+    "purpose": "Other",
+    "category": "Entertainment",
+    "spend_m": 131.2820199597349,
+    "spend_b": 0.1312820199597349,
+    "share": 0.021158544577827527,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "F10",
+    "category_order": 4
+  },
+  {
+    "purpose": "Other",
+    "category": "Education",
+    "spend_m": 183.27061633236937,
+    "spend_b": 0.18327061633236938,
+    "share": 0.029537475936641532,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "F11",
+    "category_order": 5
+  },
+  {
+    "purpose": "Other",
+    "category": "Other",
+    "spend_m": 664.8082396954735,
+    "spend_b": 0.6648082396954735,
+    "share": 0.10714623967256123,
+    "source": "IVS 2026 Table 7",
+    "source_cells": "F12",
+    "category_order": 6
+  }
+]

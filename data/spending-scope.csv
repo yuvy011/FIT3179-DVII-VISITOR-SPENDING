@@ -1,0 +1,7 @@
+step,label,start,end,amount_b,display,kind,source_cells
+1,"Full trip
+budget",0,57.57450092789036,57.57450092789036,A$57.6b,Full trip budget,O31
+2,"Scope
+difference",40.897544156043054,57.57450092789036,16.67695677184731,−A$16.7b,Difference of published totals,O31 - K31
+3,"Spent in
+Australia",0,40.897544156043054,40.897544156043054,A$40.9b,Spend in Australia,K31

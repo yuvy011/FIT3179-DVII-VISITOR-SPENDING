@@ -1,0 +1,42 @@
+[
+  {
+    "purpose": "Holiday",
+    "category": "Tours",
+    "spend_b": 3.352105
+  },
+  {
+    "purpose": "Holiday",
+    "category": "Entertainment",
+    "spend_b": 0.523318
+  },
+  {
+    "purpose": "Visiting friends & family",
+    "category": "Tours",
+    "spend_b": 0.28262
+  },
+  {
+    "purpose": "Visiting friends & family",
+    "category": "Entertainment",
+    "spend_b": 0.222854
+  },
+  {
+    "purpose": "Business",
+    "category": "Tours",
+    "spend_b": 0.245187
+  },
+  {
+    "purpose": "Business",
+    "category": "Entertainment",
+    "spend_b": 0.024326
+  },
+  {
+    "purpose": "Education",
+    "category": "Tours",
+    "spend_b": 0.113778
+  },
+  {
+    "purpose": "Education",
+    "category": "Entertainment",
+    "spend_b": 0.187255
+  }
+]

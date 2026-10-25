@@ -1,0 +1,182 @@
+[
+  {
+    "year": 2024,
+    "category": "Food, drink & stay",
+    "spend_m": 15432.89360087279,
+    "spend_b": 15.43289360087279,
+    "share": 0.3298058785504729,
+    "source": "IVS 2024 Table 8",
+    "source_cells": "H8",
+    "index": 100.0
+  },
+  {
+    "year": 2024,
+    "category": "Transport",
+    "spend_m": 15914.891758223974,
+    "spend_b": 15.914891758223973,
+    "share": 0.340106333530343,
+    "source": "IVS 2024 Table 8",
+    "source_cells": "H5,H7",
+    "index": 100.0
+  },
+  {
+    "year": 2024,
+    "category": "Tours",
+    "spend_m": 3033.8083893794974,
+    "spend_b": 3.0338083893794976,
+    "share": 0.06483345684159413,
+    "source": "IVS 2024 Table 8",
+    "source_cells": "H6",
+    "index": 100.0
+  },
+  {
+    "year": 2024,
+    "category": "Shopping",
+    "spend_m": 3619.572803559258,
+    "spend_b": 3.619572803559258,
+    "share": 0.07735142996046752,
+    "source": "IVS 2024 Table 8",
+    "source_cells": "H9",
+    "index": 100.0
+  },
+  {
+    "year": 2024,
+    "category": "Entertainment",
+    "spend_m": 597.0858274139731,
+    "spend_b": 0.5970858274139731,
+    "share": 0.012759915345309234,
+    "source": "IVS 2024 Table 8",
+    "source_cells": "H10",
+    "index": 100.0
+  },
+  {
+    "year": 2024,
+    "category": "Education",
+    "spend_m": 6270.843365906959,
+    "spend_b": 6.270843365906959,
+    "share": 0.13400993093274396,
+    "source": "IVS 2024 Table 8",
+    "source_cells": "H11",
+    "index": 100.0
+  },
+  {
+    "year": 2025,
+    "category": "Food, drink & stay",
+    "spend_m": 16860.469891480003,
+    "spend_b": 16.86046989148,
+    "share": 0.3394151732126356,
+    "source": "IVS 2025 Table 8",
+    "source_cells": "H8",
+    "index": 109.25021792754715
+  },
+  {
+    "year": 2025,
+    "category": "Transport",
+    "spend_m": 15268.92918306,
+    "spend_b": 15.26892918306,
+    "share": 0.30737614531482427,
+    "source": "IVS 2025 Table 8",
+    "source_cells": "H5,H7",
+    "index": 95.94114377290582
+  },
+  {
+    "year": 2025,
+    "category": "Tours",
+    "spend_m": 3782.26744717,
+    "spend_b": 3.78226744717,
+    "share": 0.07614016507134434,
+    "source": "IVS 2025 Table 8",
+    "source_cells": "H6",
+    "index": 124.67061072184536
+  },
+  {
+    "year": 2025,
+    "category": "Shopping",
+    "spend_m": 3847.0621986099995,
+    "spend_b": 3.8470621986099998,
+    "share": 0.0774445368904471,
+    "source": "IVS 2025 Table 8",
+    "source_cells": "H9",
+    "index": 106.28497912314522
+  },
+  {
+    "year": 2025,
+    "category": "Entertainment",
+    "spend_m": 677.2529496,
+    "spend_b": 0.6772529495999999,
+    "share": 0.013633660786251937,
+    "source": "IVS 2025 Table 8",
+    "source_cells": "H10",
+    "index": 113.42639843475052
+  },
+  {
+    "year": 2025,
+    "category": "Education",
+    "spend_m": 7045.1108589899995,
+    "spend_b": 7.045110858989999,
+    "share": 0.14182389565042017,
+    "source": "IVS 2025 Table 8",
+    "source_cells": "H11",
+    "index": 112.34710305941532
+  },
+  {
+    "year": 2026,
+    "category": "Food, drink & stay",
+    "spend_m": 20236.935549391448,
+    "spend_b": 20.236935549391447,
+    "share": 0.35149128908190375,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "H8",
+    "index": 131.12858853797172
+  },
+  {
+    "year": 2026,
+    "category": "Transport",
+    "spend_m": 16649.856572043118,
+    "spend_b": 16.649856572043117,
+    "share": 0.2891880312240372,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "H5,H7",
+    "index": 104.61809495775775
+  },
+  {
+    "year": 2026,
+    "category": "Tours",
+    "spend_m": 4079.110069170759,
+    "spend_b": 4.079110069170759,
+    "share": 0.070849247556304,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "H6",
+    "index": 134.4550988602499
+  },
+  {
+    "year": 2026,
+    "category": "Shopping",
+    "spend_m": 4665.320668263047,
+    "spend_b": 4.665320668263047,
+    "share": 0.08103102229416047,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "H9",
+    "index": 128.8914720454156
+  },
+  {
+    "year": 2026,
+    "category": "Entertainment",
+    "spend_m": 1089.0347655461328,
+    "spend_b": 1.0890347655461328,
+    "share": 0.01891522719250494,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "H10",
+    "index": 182.3916622276617
+  },
+  {
+    "year": 2026,
+    "category": "Education",
+    "spend_m": 8528.798467649585,
+    "spend_b": 8.528798467649585,
+    "share": 0.14813499605201172,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "H11",
+    "index": 136.0071998292698
+  }
+]

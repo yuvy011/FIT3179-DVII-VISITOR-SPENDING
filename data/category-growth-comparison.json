@@ -1,0 +1,82 @@
+[
+ {
+  "category": "Food, drink & stay",
+  "period": "2024–2025",
+  "growth": 9.25,
+  "growth_label": "+9%",
+  "spend_2024_b": 15.43,
+  "spend_b": 16.86
+ },
+ {
+  "category": "Food, drink & stay",
+  "period": "2024–2026",
+  "growth": 31.13,
+  "growth_label": "+31%",
+  "spend_2024_b": 15.43,
+  "spend_b": 20.24
+ },
+ {
+  "category": "Transport",
+  "period": "2024–2025",
+  "growth": -4.06,
+  "growth_label": "−4%",
+  "spend_2024_b": 15.91,
+  "spend_b": 15.27
+ },
+ {
+  "category": "Transport",
+  "period": "2024–2026",
+  "growth": 4.62,
+  "growth_label": "+5%",
+  "spend_2024_b": 15.91,
+  "spend_b": 16.65
+ },
+ {
+  "category": "Shopping",
+  "period": "2024–2025",
+  "growth": 6.28,
+  "growth_label": "+6%",
+  "spend_2024_b": 3.62,
+  "spend_b": 3.85
+ },
+ {
+  "category": "Shopping",
+  "period": "2024–2026",
+  "growth": 28.89,
+  "growth_label": "+29%",
+  "spend_2024_b": 3.62,
+  "spend_b": 4.67
+ },
+ {
+  "category": "Entertainment",
+  "period": "2024–2025",
+  "growth": 13.43,
+  "growth_label": "+13%",
+  "spend_2024_b": 0.6,
+  "spend_b": 0.68
+ },
+ {
+  "category": "Entertainment",
+  "period": "2024–2026",
+  "growth": 82.39,
+  "growth_label": "+82%",
+  "spend_2024_b": 0.6,
+  "spend_b": 1.09
+ },
+ {
+  "category": "Education",
+  "period": "2024–2025",
+  "growth": 12.35,
+  "growth_label": "+12%",
+  "spend_2024_b": 6.27,
+  "spend_b": 7.05
+ },
+ {
+  "category": "Education",
+  "period": "2024–2026",
+  "growth": 36.01,
+  "growth_label": "+36%",
+  "spend_2024_b": 6.27,
+  "spend_b": 8.53
+ }
+]

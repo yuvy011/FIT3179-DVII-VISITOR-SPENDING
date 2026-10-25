@@ -1,0 +1,32 @@
+[
+  {
+    "step": 1,
+    "label": "Full trip\nbudget",
+    "start": 0,
+    "end": 57.57450092789036,
+    "amount_b": 57.57450092789036,
+    "display": "A$57.6b",
+    "kind": "Full trip budget",
+    "source_cells": "O31"
+  },
+  {
+    "step": 2,
+    "label": "Scope\ndifference",
+    "start": 40.897544156043054,
+    "end": 57.57450092789036,
+    "amount_b": 16.67695677184731,
+    "display": "−A$16.7b",
+    "kind": "Difference of published totals",
+    "source_cells": "O31 - K31"
+  },
+  {
+    "step": 3,
+    "label": "Spent in\nAustralia",
+    "start": 0,
+    "end": 40.897544156043054,
+    "amount_b": 40.897544156043054,
+    "display": "A$40.9b",
+    "kind": "Spend in Australia",
+    "source_cells": "K31"
+  }
+]

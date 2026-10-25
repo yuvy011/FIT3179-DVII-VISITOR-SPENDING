@@ -1,0 +1,50 @@
+[
+  {
+    "id": "budget",
+    "parent": null,
+    "value": 0,
+    "label": ""
+  },
+  {
+    "id": "Food, drink & stay",
+    "parent": "budget",
+    "value": 20.236935549391447,
+    "label": "Food, drink\n& stay",
+    "share": 0.35149128908190375
+  },
+  {
+    "id": "Transport",
+    "parent": "budget",
+    "value": 16.649856572043117,
+    "label": "Transport",
+    "share": 0.2891880312240372
+  },
+  {
+    "id": "Tours",
+    "parent": "budget",
+    "value": 4.079110069170759,
+    "label": "Tours",
+    "share": 0.070849247556304
+  },
+  {
+    "id": "Shopping",
+    "parent": "budget",
+    "value": 4.665320668263047,
+    "label": "Shopping",
+    "share": 0.08103102229416047
+  },
+  {
+    "id": "Entertainment",
+    "parent": "budget",
+    "value": 1.0890347655461328,
+    "label": "Entertainment",
+    "share": 0.01891522719250494
+  },
+  {
+    "id": "Education",
+    "parent": "budget",
+    "value": 8.528798467649585,
+    "label": "Education",
+    "share": 0.14813499605201172
+  }
+]

@@ -1,0 +1,902 @@
+[
+  {
+    "cell": 1,
+    "column": 0,
+    "row": 0,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 2,
+    "column": 1,
+    "row": 0,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 3,
+    "column": 2,
+    "row": 0,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 4,
+    "column": 3,
+    "row": 0,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 5,
+    "column": 4,
+    "row": 0,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 6,
+    "column": 5,
+    "row": 0,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 7,
+    "column": 6,
+    "row": 0,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 8,
+    "column": 7,
+    "row": 0,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 9,
+    "column": 8,
+    "row": 0,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 10,
+    "column": 9,
+    "row": 0,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 11,
+    "column": 0,
+    "row": 1,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 12,
+    "column": 1,
+    "row": 1,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 13,
+    "column": 2,
+    "row": 1,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 14,
+    "column": 3,
+    "row": 1,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 15,
+    "column": 4,
+    "row": 1,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 16,
+    "column": 5,
+    "row": 1,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 17,
+    "column": 6,
+    "row": 1,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 18,
+    "column": 7,
+    "row": 1,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 19,
+    "column": 8,
+    "row": 1,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 20,
+    "column": 9,
+    "row": 1,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 21,
+    "column": 0,
+    "row": 2,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 22,
+    "column": 1,
+    "row": 2,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 23,
+    "column": 2,
+    "row": 2,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 24,
+    "column": 3,
+    "row": 2,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 25,
+    "column": 4,
+    "row": 2,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 26,
+    "column": 5,
+    "row": 2,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 27,
+    "column": 6,
+    "row": 2,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 28,
+    "column": 7,
+    "row": 2,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 29,
+    "column": 8,
+    "row": 2,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 30,
+    "column": 9,
+    "row": 2,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 31,
+    "column": 0,
+    "row": 3,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 32,
+    "column": 1,
+    "row": 3,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 33,
+    "column": 2,
+    "row": 3,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 34,
+    "column": 3,
+    "row": 3,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 35,
+    "column": 4,
+    "row": 3,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 36,
+    "column": 5,
+    "row": 3,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 37,
+    "column": 6,
+    "row": 3,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 38,
+    "column": 7,
+    "row": 3,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 39,
+    "column": 8,
+    "row": 3,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 40,
+    "column": 9,
+    "row": 3,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 41,
+    "column": 0,
+    "row": 4,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 42,
+    "column": 1,
+    "row": 4,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 43,
+    "column": 2,
+    "row": 4,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 44,
+    "column": 3,
+    "row": 4,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 45,
+    "column": 4,
+    "row": 4,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 46,
+    "column": 5,
+    "row": 4,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 47,
+    "column": 6,
+    "row": 4,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 48,
+    "column": 7,
+    "row": 4,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 49,
+    "column": 8,
+    "row": 4,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 50,
+    "column": 9,
+    "row": 4,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 51,
+    "column": 0,
+    "row": 5,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 52,
+    "column": 1,
+    "row": 5,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 53,
+    "column": 2,
+    "row": 5,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 54,
+    "column": 3,
+    "row": 5,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 55,
+    "column": 4,
+    "row": 5,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 56,
+    "column": 5,
+    "row": 5,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 57,
+    "column": 6,
+    "row": 5,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 58,
+    "column": 7,
+    "row": 5,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 59,
+    "column": 8,
+    "row": 5,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 60,
+    "column": 9,
+    "row": 5,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 61,
+    "column": 0,
+    "row": 6,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 62,
+    "column": 1,
+    "row": 6,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 63,
+    "column": 2,
+    "row": 6,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 64,
+    "column": 3,
+    "row": 6,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 65,
+    "column": 4,
+    "row": 6,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 66,
+    "column": 5,
+    "row": 6,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 67,
+    "column": 6,
+    "row": 6,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 68,
+    "column": 7,
+    "row": 6,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 69,
+    "column": 8,
+    "row": 6,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 70,
+    "column": 9,
+    "row": 6,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 71,
+    "column": 0,
+    "row": 7,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 72,
+    "column": 1,
+    "row": 7,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 73,
+    "column": 2,
+    "row": 7,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 74,
+    "column": 3,
+    "row": 7,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 75,
+    "column": 4,
+    "row": 7,
+    "group": "Holiday travellers",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 76,
+    "column": 5,
+    "row": 7,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 77,
+    "column": 6,
+    "row": 7,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 78,
+    "column": 7,
+    "row": 7,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 79,
+    "column": 8,
+    "row": 7,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 80,
+    "column": 9,
+    "row": 7,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 81,
+    "column": 0,
+    "row": 8,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 82,
+    "column": 1,
+    "row": 8,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 83,
+    "column": 2,
+    "row": 8,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 84,
+    "column": 3,
+    "row": 8,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 85,
+    "column": 4,
+    "row": 8,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 86,
+    "column": 5,
+    "row": 8,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 87,
+    "column": 6,
+    "row": 8,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 88,
+    "column": 7,
+    "row": 8,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 89,
+    "column": 8,
+    "row": 8,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 90,
+    "column": 9,
+    "row": 8,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 91,
+    "column": 0,
+    "row": 9,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 92,
+    "column": 1,
+    "row": 9,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 93,
+    "column": 2,
+    "row": 9,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 94,
+    "column": 3,
+    "row": 9,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 95,
+    "column": 4,
+    "row": 9,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 96,
+    "column": 5,
+    "row": 9,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 97,
+    "column": 6,
+    "row": 9,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 98,
+    "column": 7,
+    "row": 9,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 99,
+    "column": 8,
+    "row": 9,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  },
+  {
+    "cell": 100,
+    "column": 9,
+    "row": 9,
+    "group": "Other travel reasons",
+    "holiday_share": 0.7498673494385926,
+    "holiday_b": 3.875423068723903,
+    "total_b": 5.168144834716885
+  }
+]

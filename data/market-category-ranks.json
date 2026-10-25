@@ -1,0 +1,202 @@
+[
+  {
+    "market": "China",
+    "category": "Food, drink & stay",
+    "rank": 1,
+    "category_spend_per_trip": 4527.9,
+    "full_trip_category_spend_b": 4.731471482317828,
+    "spend_label": "A$4.73b"
+  },
+  {
+    "market": "UK",
+    "category": "Food, drink & stay",
+    "rank": 2,
+    "category_spend_per_trip": 2469.3,
+    "full_trip_category_spend_b": 1.8047761757901226,
+    "spend_label": "A$1.80b"
+  },
+  {
+    "market": "India",
+    "category": "Food, drink & stay",
+    "rank": 5,
+    "category_spend_per_trip": 2045.1,
+    "full_trip_category_spend_b": 0.8743705353195608,
+    "spend_label": "A$0.87b"
+  },
+  {
+    "market": "USA",
+    "category": "Food, drink & stay",
+    "rank": 4,
+    "category_spend_per_trip": 1827.9,
+    "full_trip_category_spend_b": 1.2848728761173285,
+    "spend_label": "A$1.28b"
+  },
+  {
+    "market": "New Zealand",
+    "category": "Food, drink & stay",
+    "rank": 3,
+    "category_spend_per_trip": 1073.6,
+    "full_trip_category_spend_b": 1.4129317072159089,
+    "spend_label": "A$1.41b"
+  },
+  {
+    "market": "UK",
+    "category": "Transport",
+    "rank": 1,
+    "category_spend_per_trip": 3266.4,
+    "full_trip_category_spend_b": 2.387299737167115,
+    "spend_label": "A$2.39b"
+  },
+  {
+    "market": "USA",
+    "category": "Transport",
+    "rank": 2,
+    "category_spend_per_trip": 2907.3,
+    "full_trip_category_spend_b": 2.0435928138923747,
+    "spend_label": "A$2.04b"
+  },
+  {
+    "market": "China",
+    "category": "Transport",
+    "rank": 3,
+    "category_spend_per_trip": 1694.0,
+    "full_trip_category_spend_b": 1.7701069126292677,
+    "spend_label": "A$1.77b"
+  },
+  {
+    "market": "India",
+    "category": "Transport",
+    "rank": 5,
+    "category_spend_per_trip": 1634.0,
+    "full_trip_category_spend_b": 0.698592372865676,
+    "spend_label": "A$0.70b"
+  },
+  {
+    "market": "New Zealand",
+    "category": "Transport",
+    "rank": 4,
+    "category_spend_per_trip": 1019.7,
+    "full_trip_category_spend_b": 1.3419178308438227,
+    "spend_label": "A$1.34b"
+  },
+  {
+    "market": "China",
+    "category": "Shopping",
+    "rank": 1,
+    "category_spend_per_trip": 1173.1,
+    "full_trip_category_spend_b": 1.2258724966626648,
+    "spend_label": "A$1.23b"
+  },
+  {
+    "market": "India",
+    "category": "Shopping",
+    "rank": 4,
+    "category_spend_per_trip": 551.5,
+    "full_trip_category_spend_b": 0.23577909530196653,
+    "spend_label": "A$0.24b"
+  },
+  {
+    "market": "UK",
+    "category": "Shopping",
+    "rank": 3,
+    "category_spend_per_trip": 378.0,
+    "full_trip_category_spend_b": 0.2762448549682077,
+    "spend_label": "A$0.28b"
+  },
+  {
+    "market": "USA",
+    "category": "Shopping",
+    "rank": 5,
+    "category_spend_per_trip": 328.9,
+    "full_trip_category_spend_b": 0.23122216790445124,
+    "spend_label": "A$0.23b"
+  },
+  {
+    "market": "New Zealand",
+    "category": "Shopping",
+    "rank": 2,
+    "category_spend_per_trip": 296.0,
+    "full_trip_category_spend_b": 0.38954216736305863,
+    "spend_label": "A$0.39b"
+  },
+  {
+    "market": "China",
+    "category": "Entertainment",
+    "rank": 1,
+    "category_spend_per_trip": 214.2,
+    "full_trip_category_spend_b": 0.22380794400107412,
+    "spend_label": "A$0.22b"
+  },
+  {
+    "market": "UK",
+    "category": "Entertainment",
+    "rank": 2,
+    "category_spend_per_trip": 150.5,
+    "full_trip_category_spend_b": 0.10999861297619476,
+    "spend_label": "A$0.11b"
+  },
+  {
+    "market": "USA",
+    "category": "Entertainment",
+    "rank": 4,
+    "category_spend_per_trip": 114.5,
+    "full_trip_category_spend_b": 0.08049373860225005,
+    "spend_label": "A$0.08b"
+  },
+  {
+    "market": "India",
+    "category": "Entertainment",
+    "rank": 5,
+    "category_spend_per_trip": 92.0,
+    "full_trip_category_spend_b": 0.039342533790157196,
+    "spend_label": "A$0.04b"
+  },
+  {
+    "market": "New Zealand",
+    "category": "Entertainment",
+    "rank": 3,
+    "category_spend_per_trip": 83.5,
+    "full_trip_category_spend_b": 0.10995348957672779,
+    "spend_label": "A$0.11b"
+  },
+  {
+    "market": "China",
+    "category": "Education",
+    "rank": 1,
+    "category_spend_per_trip": 4431.1,
+    "full_trip_category_spend_b": 4.63030690609906,
+    "spend_label": "A$4.63b"
+  },
+  {
+    "market": "India",
+    "category": "Education",
+    "rank": 2,
+    "category_spend_per_trip": 1156.9,
+    "full_trip_category_spend_b": 0.49461042717628123,
+    "spend_label": "A$0.49b"
+  },
+  {
+    "market": "USA",
+    "category": "Education",
+    "rank": 3,
+    "category_spend_per_trip": 188.1,
+    "full_trip_category_spend_b": 0.13224051172806928,
+    "spend_label": "A$0.13b"
+  },
+  {
+    "market": "New Zealand",
+    "category": "Education",
+    "rank": 4,
+    "category_spend_per_trip": 58.5,
+    "full_trip_category_spend_b": 0.07693913950309837,
+    "spend_label": "A$0.08b"
+  },
+  {
+    "market": "UK",
+    "category": "Education",
+    "rank": 5,
+    "category_spend_per_trip": 39.9,
+    "full_trip_category_spend_b": 0.02914973706633024,
+    "spend_label": "A$0.03b"
+  }
+]

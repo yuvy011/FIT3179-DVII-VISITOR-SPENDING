@@ -1,0 +1,174 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Bump chart: rank of each of five origin markets by total full-trip spending in each category. All circles are the same size; the vertical position shows the rank.",
+  "width": 760,
+  "height": 400,
+  "config": {
+    "background": "transparent",
+    "font": "Work Sans",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "gridColor": "#e3edf2",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "labelLimit": 150,
+      "tickCount": 5,
+      "labelPadding": 6,
+      "titlePadding": 12
+    },
+    "legend": {
+      "orient": "bottom",
+      "title": null,
+      "columns": 2,
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "padding": 10,
+      "rowPadding": 6,
+      "columnPadding": 22,
+      "labelLimit": 420,
+      "titleLimit": 420,
+      "symbolType": "square",
+      "symbolSize": 170,
+      "titleFontWeight": "bold"
+    },
+    "text": {
+      "font": "Work Sans"
+    }
+  },
+  "data": {
+    "url": "data/market-category-ranks.json"
+  },
+  "encoding": {
+    "x": {
+      "field": "category",
+      "type": "ordinal",
+      "sort": [
+        "Food, drink & stay",
+        "Transport",
+        "Shopping",
+        "Entertainment",
+        "Education"
+      ],
+      "title": null,
+      "scale": {
+        "paddingOuter": 0.25
+      },
+      "axis": {
+        "orient": "top",
+        "labelAngle": 0,
+        "labelFontSize": 13,
+        "labelFontWeight": 700,
+        "ticks": false,
+        "labelPadding": 10,
+        "labelLimit": 200,
+        "grid": false
+      }
+    },
+    "y": {
+      "field": "rank",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          5.6,
+          0.4
+        ]
+      },
+      "title": "Rank by total spending (1st = highest)",
+      "axis": {
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "labelExpr": "datum.value == 1 ? '1st' : datum.value == 2 ? '2nd' : datum.value == 3 ? '3rd' : datum.value + 'th'",
+        "grid": true,
+        "gridDash": [
+          2,
+          4
+        ]
+      }
+    },
+    "color": {
+      "field": "market",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "China",
+          "UK",
+          "USA",
+          "New Zealand",
+          "India"
+        ],
+        "range": [
+          "#0B6272",
+          "#E0953F",
+          "#B5679E",
+          "#3DA27A",
+          "#8DB6E3"
+        ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "title": null,
+        "symbolType": "square",
+        "symbolSize": 260,
+        "labelFontSize": 12,
+        "columnPadding": 24,
+        "symbolStrokeColor": "#ffffff",
+        "symbolStrokeWidth": 1,
+        "columns": 5,
+        "symbolOpacity": 1
+      }
+    },
+    "tooltip": [
+      {
+        "field": "market",
+        "title": "Market"
+      },
+      {
+        "field": "category",
+        "title": "Category"
+      },
+      {
+        "field": "rank",
+        "title": "Rank"
+      },
+      {
+        "field": "spend_label",
+        "title": "Full-trip spending"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 4,
+        "opacity": 0.55,
+        "interpolate": "monotone"
+      },
+      "encoding": {
+        "detail": {
+          "field": "market"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 1500,
+        "stroke": "white",
+        "strokeWidth": 2,
+        "opacity": 0.95
+      },
+      "encoding": {}
+    }
+  ]
+}

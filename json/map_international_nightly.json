@@ -1,0 +1,259 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Choropleth map of overseas visitor spending per night by state, with a six colour bands, exact dollar labels on every state and callouts for the two smallest.",
+  "width": 640,
+  "height": 420,
+  "config": {
+    "background": "transparent",
+    "font": "Work Sans",
+    "view": {
+      "stroke": null
+    },
+    "legend": {
+      "orient": "bottom",
+      "title": null,
+      "columns": 4,
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "padding": 10,
+      "rowPadding": 6,
+      "columnPadding": 16
+    },
+    "text": {
+      "font": "Work Sans"
+    }
+  },
+  "projection": {
+    "type": "mercator",
+    "center": [
+      136.5,
+      -28.1
+    ],
+    "scale": 550
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/australia-states.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "transform": [
+        {
+          "calculate": "datum.properties.nightly < 100 ? 'Under A$100' : datum.properties.nightly < 110 ? 'A$100\u2013<110' : datum.properties.nightly < 120 ? 'A$110\u2013<120' : datum.properties.nightly < 130 ? 'A$120\u2013<130' : datum.properties.nightly < 140 ? 'A$130\u2013<140' : 'A$140 and above'",
+          "as": "band"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "white",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "color": {
+          "field": "properties.nightly", "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [100, 110, 120, 130, 140],
+            "range": ["#E6F3F4", "#BFE0E4", "#8CC3CB", "#5AA5B0", "#2C7B89", "#0A4F5C"]
+          },
+          "legend": {
+            "type": "gradient",
+            "title": "Average spend per night of stay (A$)",
+            "orient": "bottom",
+            "direction": "horizontal",
+            "gradientLength": 360, "gradientThickness": 14,
+            "gradientStrokeColor": "#000000", "gradientStrokeWidth": 0.1,
+            "values": [90, 100, 110, 120, 130, 140],
+            "labelExpr": "datum.value < 100 ? '' : datum.value >= 140 ? '>140' : format(datum.value, 'd')",
+            "labelFontSize": 11, "titleLimit": 500, "titleFontSize": 12, "titleFontWeight": "bold", "titlePadding": 8
+          }
+         
+        },
+        "tooltip": [
+          {
+            "field": "properties.name",
+            "title": "State or territory"
+          },
+          {
+            "field": "properties.nightly",
+            "type": "quantitative",
+            "title": "A$ per night",
+            "format": ".0f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/international-states.json"
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "lineBreak": "\n",
+        "lineHeight": 14
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "txt"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.nightly >= 130",
+            "value": "white"
+          },
+          "value": "#153F50"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.state != 'ACT' && datum.state != 'TAS' && datum.state != 'VIC'"
+        },
+        {
+          "calculate": "datum.state + '\\nA$' + format(datum.nightly,'.0f')",
+          "as": "txt"
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "state": "ACT",
+            "lon0": 149.13,
+            "lat0": -35.3,
+            "lon1": 153.6,
+            "lat1": -36.2
+          },
+          {
+            "state": "TAS",
+            "lon0": 146.8,
+            "lat0": -42.0,
+            "lon1": 151.6,
+            "lat1": -42.9
+          },
+          {
+            "state": "VIC",
+            "lon0": 144.2,
+            "lat0": -37.3,
+            "lon1": 140.0,
+            "lat1": -39.6
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "stroke": "#153F50",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon0",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat0",
+          "type": "quantitative"
+        },
+        "longitude2": {
+          "field": "lon1"
+        },
+        "latitude2": {
+          "field": "lat1"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 149.13,
+            "lat": -35.3
+          },
+          {
+            "lon": 146.8,
+            "lat": -42.0
+          },
+          {
+            "lon": 144.2,
+            "lat": -37.3
+          }
+        ]
+      },
+      "mark": {
+        "type": "circle",
+        "size": 22,
+        "color": "#153F50"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/international-states.json"
+      },
+      "transform": [
+        {
+          "filter": "datum.state == 'ACT' || datum.state == 'TAS' || datum.state == 'VIC'"
+        },
+        {
+          "calculate": "datum.state == 'ACT' ? 153.8 : datum.state == 'VIC' ? 140.0 : 151.8",
+          "as": "lx"
+        },
+        {
+          "calculate": "datum.state == 'ACT' ? -36.2 : datum.state == 'VIC' ? -39.6 : -42.9",
+          "as": "ly"
+        },
+        {
+          "calculate": "datum.state + '  A$' + format(datum.nightly,'.0f')",
+          "as": "txt"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": {
+          "expr": "datum.state == 'VIC' ? 'right' : 'left'"
+        },
+        "dx": {
+          "expr": "datum.state == 'VIC' ? -5 : 5"
+        },
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#153F50"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lx",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "ly",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "txt"
+        }
+      }
+    }
+  ]
+}

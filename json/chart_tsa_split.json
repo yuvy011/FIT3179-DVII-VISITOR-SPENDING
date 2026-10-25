@@ -1,0 +1,113 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "white",
+  "config": {
+    "font": "Work Sans",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Work Sans",
+      "titleFont": "Work Sans",
+      "labelColor": "#173d47",
+      "titleColor": "#173d47"
+    },
+    "legend": {
+      "labelFont": "Work Sans",
+      "titleFont": "Work Sans",
+      "orient": "bottom"
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "group": "Domestic",
+        "spend": 168.8,
+        "share": "80.0%"
+      },
+      {
+        "group": "International",
+        "spend": 42.3,
+        "share": "20.0%"
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "group",
+      "type": "nominal",
+      "sort": [
+        "Domestic",
+        "International"
+      ],
+      "axis": {
+        "title": null,
+        "labelFontSize": 15
+      }
+    },
+    "x": {
+      "field": "spend",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          190
+        ]
+      },
+      "axis": {
+        "title": "Tourism consumption (A$ billion)"
+      }
+    },
+    "color": {
+      "field": "group",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Domestic",
+          "International"
+        ],
+        "range": [
+          "#087f8c",
+          "#6eafbb"
+        ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "title": null,
+        "symbolType": "square",
+        "symbolSize": 260,
+        "labelFontSize": 12,
+        "columnPadding": 24,
+        "symbolStrokeColor": "#ffffff",
+        "symbolStrokeWidth": 1,
+        "columns": 2
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": 62,
+        "cornerRadiusEnd": 5
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "fontSize": 16,
+        "fontWeight": 600,
+        "color": "#173d47"
+      },
+      "encoding": {
+        "text": {
+          "field": "share"
+        }
+      }
+    }
+  ],
+  "height": 235
+}

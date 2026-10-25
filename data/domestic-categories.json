@@ -1,0 +1,50 @@
+[
+  {
+    "category": "Accommodation",
+    "spend_b": 29.579669000000003,
+    "spend_m": 29579.669,
+    "share": 0.2749142196231375,
+    "source": "DoTS 2026 Table 4b",
+    "source_cells": "C15"
+  },
+  {
+    "category": "Food & drink",
+    "spend_b": 27.530084,
+    "spend_m": 27530.084,
+    "share": 0.25586532286819785,
+    "source": "DoTS 2026 Table 4b",
+    "source_cells": "C16,C17,C18"
+  },
+  {
+    "category": "Transport",
+    "spend_b": 36.340203,
+    "spend_m": 36340.203,
+    "share": 0.3377467999622105,
+    "source": "DoTS 2026 Table 4b",
+    "source_cells": "C6,C9,C10,C11,C12,C13,C14"
+  },
+  {
+    "category": "Entertainment",
+    "spend_b": 2.660977,
+    "spend_m": 2660.977,
+    "share": 0.024731190041041955,
+    "source": "DoTS 2026 Table 4b",
+    "source_cells": "C20"
+  },
+  {
+    "category": "Tours",
+    "spend_b": 2.7197370000000003,
+    "spend_m": 2719.737,
+    "share": 0.025277307022440753,
+    "source": "DoTS 2026 Table 4b",
+    "source_cells": "C7,C8"
+  },
+  {
+    "category": "Shopping",
+    "spend_b": 6.019332,
+    "spend_m": 6019.332,
+    "share": 0.05594382950778048,
+    "source": "DoTS 2026 Table 4b",
+    "source_cells": "C19"
+  }
+]

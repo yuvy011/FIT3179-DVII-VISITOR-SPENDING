@@ -1,0 +1,242 @@
+[
+  {
+    "market": "China",
+    "category": "Food, drink & stay",
+    "share": 0.34416227459481574,
+    "spend_b": 4.731471482317828,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "B8"
+  },
+  {
+    "market": "China",
+    "category": "Transport",
+    "share": 0.12875572083720177,
+    "spend_b": 1.7701069126292677,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "B5,B7"
+  },
+  {
+    "market": "China",
+    "category": "Tours",
+    "share": 0.03904082715900167,
+    "spend_b": 0.5367251845554205,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "B6"
+  },
+  {
+    "market": "China",
+    "category": "Shopping",
+    "share": 0.08916868005890859,
+    "spend_b": 1.2258724966626648,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "B9"
+  },
+  {
+    "market": "China",
+    "category": "Entertainment",
+    "share": 0.016279555180171053,
+    "spend_b": 0.22380794400107412,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "B10"
+  },
+  {
+    "market": "China",
+    "category": "Education",
+    "share": 0.33680366939345546,
+    "spend_b": 4.63030690609906,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "B11"
+  },
+  {
+    "market": "UK",
+    "category": "Food, drink & stay",
+    "share": 0.3293411813345927,
+    "spend_b": 1.8047761757901226,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "C8"
+  },
+  {
+    "market": "UK",
+    "category": "Transport",
+    "share": 0.43564189631114225,
+    "spend_b": 2.387299737167115,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "C5,C7"
+  },
+  {
+    "market": "UK",
+    "category": "Tours",
+    "share": 0.11614245936728566,
+    "spend_b": 0.6364559172780643,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "C6"
+  },
+  {
+    "market": "UK",
+    "category": "Shopping",
+    "share": 0.05041002208099444,
+    "spend_b": 0.2762448549682077,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "C9"
+  },
+  {
+    "market": "UK",
+    "category": "Entertainment",
+    "share": 0.020072889718242542,
+    "spend_b": 0.10999861297619476,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "C10"
+  },
+  {
+    "market": "UK",
+    "category": "Education",
+    "share": 0.0053193348681118535,
+    "spend_b": 0.02914973706633024,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "C11"
+  },
+  {
+    "market": "USA",
+    "category": "Food, drink & stay",
+    "share": 0.27774711361657795,
+    "spend_b": 1.2848728761173285,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "D8"
+  },
+  {
+    "market": "USA",
+    "category": "Transport",
+    "share": 0.44175732558180086,
+    "spend_b": 2.0435928138923747,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "D5,D7"
+  },
+  {
+    "market": "USA",
+    "category": "Tours",
+    "share": 0.16672102036513858,
+    "spend_b": 0.771260281183298,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "D6"
+  },
+  {
+    "market": "USA",
+    "category": "Shopping",
+    "share": 0.04998260211834739,
+    "spend_b": 0.23122216790445124,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "D9"
+  },
+  {
+    "market": "USA",
+    "category": "Entertainment",
+    "share": 0.017400089905034888,
+    "spend_b": 0.08049373860225005,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "D10"
+  },
+  {
+    "market": "USA",
+    "category": "Education",
+    "share": 0.028586034555138747,
+    "spend_b": 0.13224051172806928,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "D11"
+  },
+  {
+    "market": "New Zealand",
+    "category": "Food, drink & stay",
+    "share": 0.3846000623637358,
+    "spend_b": 1.4129317072159089,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "E8"
+  },
+  {
+    "market": "New Zealand",
+    "category": "Transport",
+    "share": 0.3652700826188468,
+    "spend_b": 1.3419178308438227,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "E5,E7"
+  },
+  {
+    "market": "New Zealand",
+    "category": "Tours",
+    "share": 0.052549692569498645,
+    "spend_b": 0.19305542068704012,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "E6"
+  },
+  {
+    "market": "New Zealand",
+    "category": "Shopping",
+    "share": 0.10603339219865325,
+    "spend_b": 0.38954216736305863,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "E9"
+  },
+  {
+    "market": "New Zealand",
+    "category": "Entertainment",
+    "share": 0.029929343882901395,
+    "spend_b": 0.10995348957672779,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "E10"
+  },
+  {
+    "market": "New Zealand",
+    "category": "Education",
+    "share": 0.02094283658578982,
+    "spend_b": 0.07693913950309837,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "E11"
+  },
+  {
+    "market": "India",
+    "category": "Food, drink & stay",
+    "share": 0.3378995743442564,
+    "spend_b": 0.8743705353195608,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "F8"
+  },
+  {
+    "market": "India",
+    "category": "Transport",
+    "share": 0.2699702882201812,
+    "spend_b": 0.698592372865676,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "F5,F7"
+  },
+  {
+    "market": "India",
+    "category": "Tours",
+    "share": 0.039951608705554316,
+    "spend_b": 0.1033813361811562,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "F6"
+  },
+  {
+    "market": "India",
+    "category": "Shopping",
+    "share": 0.09111658355766879,
+    "spend_b": 0.23577909530196653,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "F9"
+  },
+  {
+    "market": "India",
+    "category": "Entertainment",
+    "share": 0.015203880831208563,
+    "spend_b": 0.039342533790157196,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "F10"
+  },
+  {
+    "market": "India",
+    "category": "Education",
+    "share": 0.1911416797090662,
+    "spend_b": 0.49461042717628123,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "F11"
+  }
+]

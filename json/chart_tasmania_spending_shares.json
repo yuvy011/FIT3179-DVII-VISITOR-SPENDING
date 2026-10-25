@@ -1,0 +1,153 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Verified spending concentration versus overnight volume in two Tasmanian international visitor aggregates. YE March 2026.",
+  "width": 850,
+  "height": 300,
+  "data": {
+    "url": "data/tasmania-spending-shares.json"
+  },
+  "encoding": {
+    "y": {
+      "field": "region",
+      "type": "nominal",
+      "sort": [
+        "Hobart and the South",
+        "Rest of Tasmania (combined)"
+      ],
+      "axis": {
+        "title": null,
+        "labelLimit": 250,
+        "labelPadding": 14
+      }
+    },
+    "yOffset": {
+      "field": "metric",
+      "sort": [
+        "Spending",
+        "Visitor-nights"
+      ]
+    },
+    "x": {
+      "field": "share",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          1
+        ]
+      },
+      "axis": {
+        "title": "Share of Tasmania\u2019s international total",
+        "format": ".0%",
+        "values": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ]
+      }
+    },
+    "color": {
+      "field": "metric",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Spending",
+          "Visitor-nights"
+        ],
+        "range": [
+          "#CC7431",
+          "#247C88"
+        ]
+      },
+      "legend": {
+        "title": null,
+        "orient": "top",
+        "direction": "horizontal",
+        "symbolType": "square",
+        "symbolSize": 150,
+        "columnPadding": 35
+      }
+    },
+    "tooltip": [
+      {
+        "field": "region",
+        "title": "Area"
+      },
+      {
+        "field": "metric",
+        "title": "Measure"
+      },
+      {
+        "field": "share",
+        "type": "quantitative",
+        "format": ".1%",
+        "title": "Share of state total"
+      },
+      {
+        "field": "spend_m",
+        "type": "quantitative",
+        "format": ",.1f",
+        "title": "Spending (A$ million)"
+      },
+      {
+        "field": "nights_k",
+        "type": "quantitative",
+        "format": ",.1f",
+        "title": "Visitor-nights (thousand)"
+      },
+      {
+        "field": "nightly",
+        "type": "quantitative",
+        "format": ".2f",
+        "title": "A$ per visitor-night"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "size": 34,
+        "opacity": 1
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "fontSize": 15,
+        "fontWeight": "bold",
+        "color": "#153F50"
+      },
+      "encoding": {
+        "color": {
+          "value": "#153F50"
+        },
+        "text": {
+          "field": "share",
+          "type": "quantitative",
+          "format": ".1%"
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "transparent",
+    "font": "Work Sans",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "titlePadding": 16,
+      "gridColor": "#E5E2DC"
+    },
+    "legend": {
+      "labelFontSize": 13
+    }
+  }
+}

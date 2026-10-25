@@ -1,0 +1,238 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Slope chart of category shares of the full overseas-visitor trip budget, 2024 versus 2026. Points and lines use the actual shares; leader lines connect slightly separated labels to crowded endpoints.",
+  "width": 800,
+  "height": 600,
+  "data": {
+    "url": "data/category-share-endpoints.json"
+  },
+  "config": {
+    "background": "transparent",
+    "font": "Work Sans",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "gridColor": "#e3edf2",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "labelLimit": 150,
+      "tickCount": 5,
+      "labelPadding": 6,
+      "titlePadding": 12
+    },
+    "legend": {
+      "orient": "bottom",
+      "title": null,
+      "columns": 2,
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "padding": 10,
+      "rowPadding": 6,
+      "columnPadding": 22,
+      "labelLimit": 420,
+      "titleLimit": 420,
+      "symbolType": "square",
+      "symbolSize": 170,
+      "titleFontWeight": "bold"
+    },
+    "text": {
+      "font": "Work Sans"
+    }
+  },
+  "encoding": {
+    "x": {
+      "field": "endpoint",
+      "type": "quantitative",
+      "title": "Change (in %)",
+      "scale": {
+        "domain": [
+          -0.3,
+          1.15
+        ]
+      },
+      "axis": {
+        "values": [
+          0,
+          1
+        ],
+        "labelExpr": "datum.value === 0 ? '2024' : '2026'",
+        "grid": false
+      }
+    },
+    "y": {
+      "field": "share",
+      "type": "quantitative",
+      "title": null,
+      "scale": {
+        "domain": [
+          0,
+          0.4
+        ]
+      },
+      "axis": {
+        "values": [
+          0,
+          0.1,
+          0.2,
+          0.3,
+          0.4
+        ],
+        "format": ".0%"
+      }
+    },
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Food, drink & stay",
+          "Transport",
+          "Shopping",
+          "Entertainment",
+          "Education"
+        ],
+        "range": [
+          "#0A737D",
+          "#1E4F63",
+          "#8FC1D4",
+          "#8E7CC3",
+          "#E0953F"
+        ]
+      },
+      "legend": {
+        "title": "Spending category",
+        "orient": "bottom",
+        "columns": 5,
+        "direction": "horizontal"
+      }
+    },
+    "opacity": {
+      "condition": {
+        "param": "slopeFocus",
+        "value": 1
+      },
+      "value": 0.2
+    },
+    "tooltip": [
+      {
+        "field": "category",
+        "title": "Category"
+      },
+      {
+        "field": "year",
+        "type": "ordinal",
+        "title": "Annual period to March"
+      },
+      {
+        "field": "share",
+        "type": "quantitative",
+        "title": "Full trip budget share",
+        "format": ".1%"
+      },
+      {
+        "field": "share_change_pp",
+        "type": "quantitative",
+        "title": "2024 to 2026 change in share",
+        "format": "+.1f"
+      },
+      {
+        "field": "spend_b",
+        "type": "quantitative",
+        "title": "Full trip spending (nominal A$b)",
+        "format": ".2f"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "slopeFocus",
+          "select": {
+            "type": "point",
+            "fields": [
+              "category"
+            ],
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "strokeWidth": 3,
+        "point": {
+          "filled": true,
+          "size": 95
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "abs(datum.label_y-datum.share) > 0.00001"
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y2": {
+          "field": "label_y"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.endpoint === 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -12,
+        "fontSize": 12,
+        "lineHeight": 14,
+        "lineBreak": "\n",
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "label_y",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "left_label"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.endpoint === 1"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 12,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "label_y",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "right_label"
+        }
+      }
+    }
+  ]
+}

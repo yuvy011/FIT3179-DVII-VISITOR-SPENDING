@@ -1,0 +1,127 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "white",
+  "config": {
+    "font": "Work Sans",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Work Sans",
+      "titleFont": "Work Sans",
+      "labelColor": "#173d47",
+      "titleColor": "#173d47"
+    },
+    "legend": {
+      "labelFont": "Work Sans",
+      "titleFont": "Work Sans",
+      "orient": "bottom"
+    }
+  },
+  "data": {
+    "url": "data/tsa-history.json"
+  },
+  "encoding": {
+    "x": {
+      "field": "fy_start",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          2016,
+          2024
+        ]
+      },
+      "axis": {
+        "values": [
+          2016,
+          2018,
+          2020,
+          2022,
+          2024
+        ],
+        "format": "d",
+        "title": "Financial year commencing"
+      }
+    },
+    "y": {
+      "field": "spend",
+      "type": "quantitative",
+      "axis": {
+        "title": "Tourism consumption (A$b)"
+      }
+    },
+    "color": {
+      "field": "group",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Domestic",
+          "International"
+        ],
+        "range": [
+          "#087f8c",
+          "#6eafbb"
+        ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "title": null
+      }
+    },
+    "tooltip": [
+      {
+        "field": "year",
+        "title": "Financial year"
+      },
+      {
+        "field": "group",
+        "title": "Tourism"
+      },
+      {
+        "field": "spend",
+        "title": "Consumption A$b",
+        "format": ".1f"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 3,
+        "point": {
+          "size": 75
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "fy_start": 2019.2,
+            "label": "Border restrictions begin · Mar 2020"
+          },
+          {
+            "fy_start": 2021.6,
+            "label": "Reopened to most · Feb 2022"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#b26742",
+        "strokeDash": [
+          5,
+          5
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "fy_start",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "height": 370
+}

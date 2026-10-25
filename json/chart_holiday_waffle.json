@@ -1,0 +1,250 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Connected dot plot comparing tours and entertainment spending by travel purpose.",
+  "width": 760,
+  "height": 300,
+  "config": {
+    "background": "transparent",
+    "font": "Work Sans",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "gridColor": "#e3edf2",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "labelPadding": 6,
+      "titlePadding": 12,
+      "labelLimit": 180
+    },
+    "legend": {
+      "orient": "bottom",
+      "title": null,
+      "columns": 2,
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "padding": 10,
+      "rowPadding": 6,
+      "columnPadding": 18
+    },
+    "text": {
+      "font": "Work Sans"
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/experience-purpose-dumbbell.json"
+      },
+      "transform": [
+        {
+          "pivot": "category",
+          "value": "spend_b",
+          "groupby": [
+            "purpose"
+          ]
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "stroke": "#b8cfd4",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "y": {
+          "field": "purpose",
+          "type": "nominal",
+          "sort": [
+            "Holiday",
+            "Visiting friends & family",
+            "Business",
+            "Education"
+          ],
+          "title": null
+        },
+        "x": {
+          "field": "Entertainment",
+          "type": "quantitative",
+          "title": "Full-trip spending (A$ billion)",
+          "scale": {
+            "domain": [
+              0,
+              3.6
+            ]
+          }
+        },
+        "x2": {
+          "field": "Tours"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/experience-purpose-dumbbell.json"
+      },
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 130
+      },
+      "encoding": {
+        "y": {
+          "field": "purpose",
+          "type": "nominal",
+          "sort": [
+            "Holiday",
+            "Visiting friends & family",
+            "Business",
+            "Education"
+          ],
+          "title": null
+        },
+        "x": {
+          "field": "spend_b",
+          "type": "quantitative",
+          "title": "Full-trip spending (A$ billion)",
+          "scale": {
+            "domain": [
+              0,
+              3.6
+            ]
+          }
+        },
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Tours",
+              "Entertainment"
+            ],
+            "range": [
+              "#087f8c",
+              "#6eafbb"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "title": "Category"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "purpose",
+            "title": "Travel purpose"
+          },
+          {
+            "field": "category",
+            "title": "Category"
+          },
+          {
+            "field": "spend_b",
+            "type": "quantitative",
+            "title": "Spending (A$b)",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/experience-purpose-dumbbell.json"
+      },
+      "transform": [
+        {
+          "filter": "datum.category === 'Tours'"
+        },
+        {
+          "calculate": "'A$' + format(datum.spend_b,'.2f') + 'b'",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "dx": 6,
+        "align": "left",
+        "color": "#087f8c"
+      },
+      "encoding": {
+        "y": {
+          "field": "purpose",
+          "type": "nominal",
+          "sort": [
+            "Holiday",
+            "Visiting friends & family",
+            "Business",
+            "Education"
+          ],
+          "title": null
+        },
+        "x": {
+          "field": "spend_b",
+          "type": "quantitative",
+          "title": "Full-trip spending (A$ billion)",
+          "scale": {
+            "domain": [
+              0,
+              3.6
+            ]
+          }
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/experience-purpose-dumbbell.json"
+      },
+      "transform": [
+        {
+          "filter": "datum.category === 'Entertainment'"
+        },
+        {
+          "calculate": "'A$' + format(datum.spend_b,'.2f') + 'b'",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "dx": -6,
+        "align": "right",
+        "color": "#6eafbb"
+      },
+      "encoding": {
+        "y": {
+          "field": "purpose",
+          "type": "nominal",
+          "sort": [
+            "Holiday",
+            "Visiting friends & family",
+            "Business",
+            "Education"
+          ],
+          "title": null
+        },
+        "x": {
+          "field": "spend_b",
+          "type": "quantitative",
+          "title": "Full-trip spending (A$ billion)",
+          "scale": {
+            "domain": [
+              0,
+              3.6
+            ]
+          }
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    }
+  ]
+}

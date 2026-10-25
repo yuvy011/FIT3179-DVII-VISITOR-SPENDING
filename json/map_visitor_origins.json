@@ -1,0 +1,673 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Single combined flow map of five selected origin markets before COVID and after reopening. Year radio buttons update widths and visible arrival labels. Hover reveals exact counts and changes. Separate schematic arrival anchors in Australia keep routes distinguishable; not actual itineraries.",
+  "width": 1000,
+  "height": 570,
+  "config": {
+    "background": "transparent",
+    "font": "Work Sans",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "gridColor": "#e3edf2",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "labelLimit": 150,
+      "tickCount": 5,
+      "labelPadding": 6,
+      "titlePadding": 12
+    },
+    "legend": {
+      "orient": "bottom",
+      "title": null,
+      "columns": 2,
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "padding": 10,
+      "rowPadding": 6,
+      "columnPadding": 22,
+      "labelLimit": 420,
+      "titleLimit": 420,
+      "symbolType": "square",
+      "symbolSize": 170,
+      "titleFontWeight": "bold"
+    },
+    "text": {
+      "font": "Work Sans"
+    }
+  },
+  "projection": {
+    "type": "equirectangular",
+    "rotate": [
+      -140,
+      0,
+      0
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/world-110m.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "countries"
+        }
+      },
+      "transform": [
+        {
+          "calculate": "datum.properties.name == 'Australia' ? 'Australia \u00b7 destination' : 'Other countries'",
+          "as": "role"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "white",
+        "strokeWidth": 0.6,
+        "opacity": 1
+      },
+      "encoding": {
+        "color": {
+          "condition": [
+            {
+              "test": "datum.properties.name == 'Australia'",
+              "value": "#D3A34F"
+            }
+          ],
+          "value": "#E8E8E3"
+        },
+        "tooltip": [
+          {
+            "field": "properties.name",
+            "title": "Country"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/abs-arrivals-before-after.json"
+      },
+      "mark": {
+        "type": "rule",
+        "opacity": 1
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "longitude2": {
+          "field": "destination_longitude"
+        },
+        "latitude2": {
+          "field": "destination_latitude"
+        },
+        "color": {
+          "field": "market",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "China",
+              "UK",
+              "USA",
+              "New Zealand",
+              "India"
+            ],
+            "range": [
+              "#0B6272",
+              "#C8553D",
+              "#B5679E",
+              "#3DA27A",
+              "#8DB6E3"
+            ]
+          },
+          "legend": {
+            "title": "Country \u00b7 click to highlight",
+            "orient": "top",
+            "columns": 5
+          }
+        },
+        "tooltip": [
+          {
+            "field": "market",
+            "title": "Country of residence"
+          },
+          {
+            "field": "period",
+            "title": "Selected financial year"
+          },
+          {
+            "field": "arrivals",
+            "type": "quantitative",
+            "title": "Visitor arrivals (selected year)",
+            "format": ",.0f"
+          },
+          {
+            "field": "before",
+            "type": "quantitative",
+            "title": "2018\u201319 arrivals",
+            "format": ",.0f"
+          },
+          {
+            "field": "after",
+            "type": "quantitative",
+            "title": "2025\u201326 arrivals",
+            "format": ",.0f"
+          },
+          {
+            "field": "change_pct",
+            "type": "quantitative",
+            "title": "Change from pre-COVID (%)",
+            "format": "+.1f"
+          }
+        ],
+        "opacity": {
+          "condition": {
+            "param": "countryChoice",
+            "value": 1
+          },
+          "value": 0.12
+        },
+        "strokeWidth": {
+          "field": "arrivals",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              1500000
+            ],
+            "range": [
+              0,
+              8
+            ]
+          },
+          "legend": {
+            "title": "Flow width = visitor arrivals",
+            "orient": "bottom-left",
+            "direction": "vertical",
+            "columns": 1,
+            "rowPadding": 4,
+            "values": [500000, 1000000, 1500000],
+            "symbolType": "stroke",
+            "symbolStrokeColor": "#5d6f7a",
+            "symbolSize": 1225,
+            "labelExpr": "datum.value >= 1000000 ? format(datum.value/1000000,'.1f') + 'm' : format(datum.value/1000,'.0f') + 'k'",
+            "fillColor": "rgba(255,255,255,0.85)",
+            "padding": 8, "cornerRadius": 4, "offset": 6, "strokeColor": "#3f4e57",
+            "titleFontSize": 12, "titleFontWidth": "bold", "labelFontSize": 12
+          }
+        }
+      },
+      "transform": [
+        {
+          "calculate": "arrivalYear == '2018-19' ? datum.before : datum.after",
+          "as": "arrivals"
+        },
+        {
+          "calculate": "arrivalYear",
+          "as": "period"
+        }
+      ]
+    },
+    {
+      "data": {
+        "url": "data/abs-arrivals-before-after.json"
+      },
+      "mark": {
+        "type": "point",
+        "shape": "triangle-up",
+        "filled": true,
+        "dx": { "expr": "0.866 * sqrt(datum.asize) / 2 * sin(datum.arrow_angle * PI / 180)" },
+        "dy": { "expr": "-0.866 * sqrt(datum.asize) / 2 * cos(datum.arrow_angle * PI / 180)" },
+        "opacity": 1
+      },
+      "encoding": {
+        "longitude": {
+          "field": "destination_longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "destination_latitude",
+          "type": "quantitative"
+        },
+        "size": { 
+          "field": "asize", 
+          "type": "quantitative", 
+          "scale": null, 
+          "legend": null 
+        },
+        "angle": {
+          "field": "arrow_angle",
+          "type": "quantitative",
+          "scale": null
+        },
+        "color": {
+          "field": "market",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "China",
+              "UK",
+              "USA",
+              "New Zealand",
+              "India"
+            ],
+            "range": [
+              "#0B6272",
+              "#C8553D",
+              "#B5679E",
+              "#3DA27A",
+              "#8DB6E3"
+            ]
+          },
+          "legend": {
+            "title": "Country \u00b7 click to highlight",
+            "orient": "top",
+            "columns": 5
+          }
+        },
+        "tooltip": [
+          {
+            "field": "market",
+            "title": "Country of residence"
+          },
+          {
+            "field": "period",
+            "title": "Selected financial year"
+          },
+          {
+            "field": "arrivals",
+            "type": "quantitative",
+            "title": "Visitor arrivals (selected year)",
+            "format": ",.0f"
+          },
+          {
+            "field": "before",
+            "type": "quantitative",
+            "title": "2018\u201319 arrivals",
+            "format": ",.0f"
+          },
+          {
+            "field": "after",
+            "type": "quantitative",
+            "title": "2025\u201326 arrivals",
+            "format": ",.0f"
+          },
+          {
+            "field": "change_pct",
+            "type": "quantitative",
+            "title": "Change from pre-COVID (%)",
+            "format": "+.1f"
+          }
+        ],
+        "opacity": {
+          "condition": {
+            "param": "countryChoice",
+            "value": 1
+          },
+          "value": 0.12
+        }
+      },
+      "transform": [
+        {
+          "calculate": "arrivalYear == '2018-19' ? datum.before : datum.after",
+          "as": "arrivals"
+        },
+        {
+          "calculate": "arrivalYear",
+          "as": "period"
+        },
+        { "calculate": "70 + 220 * min(datum.arrivals, 1500000) / 1500000", 
+          "as": "asize" 
+        }
+      ]
+    },
+    {
+      "data": {
+        "url": "data/abs-arrivals-before-after.json"
+      },
+      "mark": {
+        "type": "circle",
+        "stroke": "white",
+        "strokeWidth": 1.5,
+        "opacity": 1,
+        "size": 65
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "market",
+            "title": "Country of residence"
+          },
+          {
+            "field": "period",
+            "title": "Selected financial year"
+          },
+          {
+            "field": "arrivals",
+            "type": "quantitative",
+            "title": "Visitor arrivals (selected year)",
+            "format": ",.0f"
+          },
+          {
+            "field": "before",
+            "type": "quantitative",
+            "title": "2018\u201319 arrivals",
+            "format": ",.0f"
+          },
+          {
+            "field": "after",
+            "type": "quantitative",
+            "title": "2025\u201326 arrivals",
+            "format": ",.0f"
+          },
+          {
+            "field": "change_pct",
+            "type": "quantitative",
+            "title": "Change from pre-COVID (%)",
+            "format": "+.1f"
+          }
+        ],
+        "color": {
+          "field": "market",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "China",
+              "UK",
+              "USA",
+              "New Zealand",
+              "India"
+            ],
+            "range": [
+              "#0B6272",
+              "#C8553D",
+              "#B5679E",
+              "#3DA27A",
+              "#8DB6E3"
+            ]
+          },
+          "legend": {
+            "title": "Country \u00b7 click to highlight",
+            "orient": "top",
+            "columns": 5
+          }
+        },
+        "opacity": {
+          "condition": {
+            "param": "countryChoice",
+            "value": 1
+          },
+          "value": 0.12
+        }
+      },
+      "transform": [
+        {
+          "calculate": "arrivalYear == '2018-19' ? datum.before : datum.after",
+          "as": "arrivals"
+        },
+        {
+          "calculate": "arrivalYear",
+          "as": "period"
+        }
+      ],
+      "params": [
+        {
+          "name": "countryChoice",
+          "select": {
+            "type": "point",
+            "fields": [
+              "market"
+            ]
+          },
+          "bind": "legend"
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "label": ["Australia","(destination)"],
+            "lon": 134,
+            "lat": -20
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 9.5,
+        "fontWeight": "bold",
+        "color": "#153F50",
+        "dy": 22
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/abs-arrivals-before-after.json"
+      },
+      "transform": [
+        {
+          "calculate": "arrivalYear == '2018-19' ? datum.before : datum.after",
+          "as": "arrivals"
+        },
+        {
+          "calculate": "arrivalYear",
+          "as": "period"
+        },
+        {
+          "calculate": "datum.market",
+          "as": "txt"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "color": "#153F50",
+        "align": {
+          "expr": "datum.market == 'India' ? 'right' : datum.market == 'New Zealand' ? 'left' : 'center'"
+        },
+        "dx": {
+          "expr": "datum.market == 'India' ? -10 : datum.market == 'New Zealand' ? 14 : 0"
+        },
+        "dy": {
+          "expr": "datum.market == 'China' ? -29 : (datum.market == 'India' ? -23 : datum.market == 'New Zealand' ? -5 : -29)"
+        }
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "txt"
+        },
+        "tooltip": [
+          {
+            "field": "market",
+            "title": "Country of residence"
+          },
+          {
+            "field": "period",
+            "title": "Selected financial year"
+          },
+          {
+            "field": "arrivals",
+            "type": "quantitative",
+            "title": "Visitor arrivals (selected year)",
+            "format": ",.0f"
+          },
+          {
+            "field": "before",
+            "type": "quantitative",
+            "title": "2018\u201319 arrivals",
+            "format": ",.0f"
+          },
+          {
+            "field": "after",
+            "type": "quantitative",
+            "title": "2025\u201326 arrivals",
+            "format": ",.0f"
+          },
+          {
+            "field": "change_pct",
+            "type": "quantitative",
+            "title": "Change from pre-COVID (%)",
+            "format": "+.1f"
+          }
+        ],
+        "opacity": {
+          "condition": {
+            "param": "countryChoice",
+            "value": 1
+          },
+          "value": 0.12
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/abs-arrivals-before-after.json"
+      },
+      "transform": [
+        {
+          "calculate": "arrivalYear == '2018-19' ? datum.before : datum.after",
+          "as": "arrivals"
+        },
+        {
+          "calculate": "arrivalYear",
+          "as": "period"
+        },
+        {
+          "calculate": "datum.arrivals >= 1000000 ? format(datum.arrivals/1000000,'.2f') + 'm arrivals' : format(datum.arrivals/1000,'.1f') + 'k arrivals'",
+          "as": "txt"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "normal",
+        "color": "#153F50",
+        "align": {
+          "expr": "datum.market == 'India' ? 'right' : datum.market == 'New Zealand' ? 'left' : 'center'"
+        },
+        "dx": {
+          "expr": "datum.market == 'India' ? 8 : datum.market == 'New Zealand' ? 14 : 0"
+        },
+        "dy": {
+          "expr": "datum.market == 'China' ? -13 : (datum.market == 'India' ? -8 : datum.market == 'New Zealand' ? 11 : -13)"
+        }
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "txt"
+        },
+        "tooltip": [
+          {
+            "field": "market",
+            "title": "Country of residence"
+          },
+          {
+            "field": "period",
+            "title": "Selected financial year"
+          },
+          {
+            "field": "arrivals",
+            "type": "quantitative",
+            "title": "Visitor arrivals (selected year)",
+            "format": ",.0f"
+          },
+          {
+            "field": "before",
+            "type": "quantitative",
+            "title": "2018\u201319 arrivals",
+            "format": ",.0f"
+          },
+          {
+            "field": "after",
+            "type": "quantitative",
+            "title": "2025\u201326 arrivals",
+            "format": ",.0f"
+          },
+          {
+            "field": "change_pct",
+            "type": "quantitative",
+            "title": "Change from pre-COVID (%)",
+            "format": "+.1f"
+          }
+        ],
+        "opacity": {
+          "condition": {
+            "param": "countryChoice",
+            "value": 1
+          },
+          "value": 0.12
+        }
+      }
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "color": "shared"
+    }
+  },
+  "params": [
+    {
+      "name": "arrivalYear",
+      "value": "2025-26",
+      "bind": {
+        "input": "radio",
+        "options": [
+          "2018-19",
+          "2025-26"
+        ],
+        "labels": [
+          "2018\u201319 (before COVID)",
+          "2025\u201326 (after reopening)"
+        ],
+        "name": "Year: "
+      }
+    }
+  ]
+}

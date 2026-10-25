@@ -1,0 +1,58 @@
+[
+  {
+    "state": "Tasmania",
+    "spending_m": 758.615527144317,
+    "nights_k": 5090.323035610827,
+    "nightly": 149.0309204027333,
+    "cells": "Table 3!K11/G11 \u00d7 1000"
+  },
+  {
+    "state": "New South Wales",
+    "spending_m": 15225.484010490876,
+    "nights_k": 107820.18638843855,
+    "nightly": 141.21181311669005,
+    "cells": "Table 3!K6/G6 \u00d7 1000"
+  },
+  {
+    "state": "Queensland",
+    "spending_m": 8155.149581182021,
+    "nights_k": 60379.67957711734,
+    "nightly": 135.0644726553444,
+    "cells": "Table 3!K8/G8 \u00d7 1000"
+  },
+  {
+    "state": "Northern Territory",
+    "spending_m": 569.7763315018115,
+    "nights_k": 4467.147449816563,
+    "nightly": 127.5481362329351,
+    "cells": "Table 3!K12/G12 \u00d7 1000"
+  },
+  {
+    "state": "Victoria",
+    "spending_m": 10527.723275396964,
+    "nights_k": 83258.89578585303,
+    "nightly": 126.44562693306563,
+    "cells": "Table 3!K7/G7 \u00d7 1000"
+  },
+  {
+    "state": "South Australia",
+    "spending_m": 1741.540210905341,
+    "nights_k": 14716.79425882256,
+    "nightly": 118.33692720554997,
+    "cells": "Table 3!K9/G9 \u00d7 1000"
+  },
+  {
+    "state": "Australian Capital Territory",
+    "spending_m": 628.8096059994849,
+    "nights_k": 5969.31908467818,
+    "nightly": 105.34025691698896,
+    "cells": "Table 3!K13/G13 \u00d7 1000"
+  },
+  {
+    "state": "Western Australia",
+    "spending_m": 3290.267868166286,
+    "nights_k": 39726.78467222357,
+    "nightly": 82.82240547060424,
+    "cells": "Table 3!K10/G10 \u00d7 1000"
+  }
+]

@@ -1,0 +1,218 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Marimekko chart of four spending categories across four travel purposes. Education has its own amber colour and a label on every column, placed above the bar when its slice is too thin to hold text.",
+  "width": 1000,
+  "height": 520,
+  "config": {
+    "background": "transparent",
+    "font": "Work Sans",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "gridColor": "#e3edf2",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "labelLimit": 150,
+      "tickCount": 5,
+      "labelPadding": 6,
+      "titlePadding": 12
+    },
+    "legend": {
+      "orient": "bottom",
+      "title": null,
+      "columns": 2,
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "padding": 10,
+      "rowPadding": 6,
+      "columnPadding": 18
+    },
+    "text": {
+      "font": "Work Sans"
+    }
+  },
+  "data": {
+    "url": "data/purpose-mosaic.json"
+  },
+  "encoding": {
+    "x": {
+      "field": "x0",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          1
+        ],
+        "nice": false
+      },
+      "axis": {
+        "title": "",
+        "values": [
+          0.1819877842402771,
+          0.47091423287729073,
+          0.6544403496320274,
+          0.8655139009950273
+        ],
+        "labelExpr": "datum.value === 0.1819877842402771 ? 'Holiday' : datum.value === 0.47091423287729073 ? 'Visiting friends & family' : datum.value === 0.6544403496320274 ? 'Business' : datum.value === 0.8655139009950273 ? 'Education' : ''",
+        "labelAngle": 0,
+        "labelLimit": 190,
+        "grid": false,
+        "ticks": false,
+        "labelPadding": 10,
+        "labelOverlap": false
+      }
+    },
+    "x2": {
+      "field": "x1"
+    },
+    "y": {
+      "field": "y0",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          1.1
+        ],
+        "nice": false
+      },
+      "axis": {
+        "title": "Share within each travel purpose",
+        "values": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "format": ".0%"
+      }
+    },
+    "y2": {
+      "field": "y1"
+    },
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Food, drink & stay",
+          "Transport",
+          "Shopping",
+          "Education"
+        ],
+        "range": [
+          "#0A737D",
+          "#1E4F63",
+          "#8FC1D4",
+          "#E0953F"
+        ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "columns": 4,
+        "title": "Spending category",
+        "titleLimit": 400,
+        "labelLimit": 400,
+        "symbolType": "square",
+        "symbolSize": 160,
+        "labelFontSize": 12,
+        "titleFontSize": 12
+      }
+    },
+    "tooltip": [
+      {
+        "field": "purpose",
+        "title": "Reason for visiting"
+      },
+      {
+        "field": "category",
+        "title": "Category"
+      },
+      {
+        "field": "spend_b",
+        "type": "quantitative",
+        "title": "Category spending (A$b)",
+        "format": ".2f"
+      },
+      {
+        "field": "share",
+        "type": "quantitative",
+        "title": "Share of selected-category spending",
+        "format": ".1%"
+      },
+      {
+        "field": "purpose_b",
+        "type": "quantitative",
+        "title": "Group spending on shown categories (A$b)",
+        "format": ".2f"
+      },
+      {
+        "field": "purpose_share",
+        "type": "quantitative",
+        "title": "Share of all spending shown",
+        "format": ".1%"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "stroke": "white",
+        "strokeWidth": 1
+      }
+    },
+    {
+      "transform": [
+        {
+          "calculate": "datum.category === 'Education' && datum.share < 0.08",
+          "as": "thin_edu"
+        },
+        {
+          "calculate": "datum.thin_edu ? 1.045 : datum.y_mid",
+          "as": "label_pos"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "lineBreak": "\n",
+        "lineHeight": 14,
+        "fontSize": {
+          "expr": "datum.thin_edu ? 12 : (datum.purpose === 'Business' ? 11 : 12)"
+        },
+        "fontWeight": 700
+      },
+      "encoding": {
+        "x": {
+          "field": "x_mid",
+          "type": "quantitative"
+        },
+        "x2": null,
+        "y": {
+          "field": "label_pos",
+          "type": "quantitative"
+        },
+        "y2": null,
+        "text": {
+          "field": "category_label"
+        },
+        "color": {
+          "condition": [
+            {
+              "test": "datum.thin_edu",
+              "value": "#A85F12"
+            },
+            {
+              "test": "indexof(['Food, drink & stay','Transport'], datum.category) >= 0",
+              "value": "white"
+            }
+          ],
+          "value": "#153F50"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "market": "China",
+    "category": "Education",
+    "share": 0.33680366939345546,
+    "spend_b": 4.63030690609906,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "B11",
+    "education_share": 0.8633402762312535,
+    "spend_m": 4630.30690609906
+  },
+  {
+    "market": "UK",
+    "category": "Education",
+    "share": 0.0053193348681118535,
+    "spend_b": 0.02914973706633024,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "C11",
+    "education_share": 0.005435091574116828,
+    "spend_m": 29.14973706633024
+  },
+  {
+    "market": "USA",
+    "category": "Education",
+    "share": 0.028586034555138747,
+    "spend_b": 0.13224051172806928,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "D11",
+    "education_share": 0.024656801857753822,
+    "spend_m": 132.24051172806927
+  },
+  {
+    "market": "New Zealand",
+    "category": "Education",
+    "share": 0.02094283658578982,
+    "spend_b": 0.07693913950309837,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "E11",
+    "education_share": 0.0143456274710657,
+    "spend_m": 76.93913950309837
+  },
+  {
+    "market": "India",
+    "category": "Education",
+    "share": 0.1911416797090662,
+    "spend_b": 0.49461042717628123,
+    "source": "IVS 2026 Table 8",
+    "source_cells": "F11",
+    "education_share": 0.0922222028658101,
+    "spend_m": 494.61042717628123
+  }
+]

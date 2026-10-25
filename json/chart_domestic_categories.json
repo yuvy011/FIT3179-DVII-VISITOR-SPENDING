@@ -1,0 +1,113 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1000,
+  "height": 500,
+  "config": {
+    "background": "transparent",
+    "font": "Work Sans",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "gridColor": "#e3edf2",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "labelLimit": 150,
+      "tickCount": 5,
+      "labelPadding": 6,
+      "titlePadding": 12
+    },
+    "legend": {
+      "orient": "bottom",
+      "title": null,
+      "columns": 2,
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "padding": 10,
+      "rowPadding": 6,
+      "columnPadding": 18
+    },
+    "text": {
+      "font": "Work Sans"
+    }
+  },
+  "data": {
+    "url": "data/domestic-categories.json"
+  },
+  "encoding": {
+    "y": {
+      "field": "category",
+      "type": "nominal",
+      "title": null,
+      "sort": [
+        "Transport",
+        "Accommodation",
+        "Food & drink",
+        "Shopping",
+        "Tours",
+        "Entertainment"
+      ]
+    },
+    "x": {
+      "field": "spend_b",
+      "type": "quantitative",
+      "title": "Residents’ travel spend (A$b)",
+      "scale": {
+        "zero": true
+      }
+    },
+    "tooltip": [
+      {
+        "field": "category",
+        "type": "nominal",
+        "title": "Category"
+      },
+      {
+        "field": "spend_b",
+        "type": "quantitative",
+        "title": "A$ billion",
+        "format": ".2f"
+      },
+      {
+        "field": "share",
+        "type": "quantitative",
+        "title": "Share of overnight budget",
+        "format": ".1%"
+      }
+    ]
+  },
+  "transform": [
+    {
+      "calculate": "'A$' + format(datum.spend_b,'.2f') + 'b'",
+      "as": "value_label"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "color": "#087f8c",
+        "cornerRadiusEnd": 3
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -6,
+        "fontSize": 11,
+        "fontWeight": 600
+      },
+      "encoding": {
+        "text": {
+          "field": "value_label"
+        },
+        "color": {
+          "value": "white"
+        }
+      }
+    }
+  ]
+}

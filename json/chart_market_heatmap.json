@@ -1,0 +1,184 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Heatmap of approximate category spending per visitor trip by origin market.",
+  "width": 760,
+  "height": 280,
+  "config": {
+    "background": "transparent",
+    "font": "Work Sans",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "grid": false,
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "labelPadding": 8,
+      "titlePadding": 12,
+      "labelLimit": 170
+    },
+    "legend": {
+      "orient": "bottom",
+      "title": null,
+      "columns": 2,
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "padding": 10,
+      "rowPadding": 6,
+      "columnPadding": 18
+    },
+    "text": {
+      "font": "Work Sans"
+    }
+  },
+  "data": {
+    "url": "data/market-categories.json"
+  },
+  "transform": [
+    {
+      "lookup": "market",
+      "from": {
+        "data": {
+          "url": "data/market-flows.json"
+        },
+        "key": "market",
+        "fields": [
+          "spend_per_trip"
+        ]
+      }
+    },
+    {
+      "calculate": "datum.share * datum.spend_per_trip",
+      "as": "category_trip_spend"
+    },
+    {
+      "calculate": "format(datum.category_trip_spend, ',.0f')",
+      "as": "spend_label"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "cornerRadius": 3,
+        "stroke": "white",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "market",
+          "type": "nominal",
+          "title": null,
+          "sort": [
+            "China",
+            "UK",
+            "USA",
+            "New Zealand",
+            "India"
+          ],
+          "axis": {
+            "labelAngle": 0,
+            "labelExpr": "datum.label === 'New Zealand' ? 'NZ' : datum.label"
+          }
+        },
+        "y": {
+          "field": "category",
+          "type": "nominal",
+          "title": null,
+          "sort": [
+            "Food, drink & stay",
+            "Transport",
+            "Tours",
+            "Shopping",
+            "Entertainment",
+            "Education"
+          ]
+        },
+        "color": {
+          "field": "category_trip_spend",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              4600
+            ],
+            "range": [
+              "#e9f5f5",
+              "#8ec6cc",
+              "#2f8b97",
+              "#0b5967"
+            ]
+          },
+          "legend": {
+            "title": "A$ spent per visitor trip in this category",
+            "orient": "bottom"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "market",
+            "title": "Origin market"
+          },
+          {
+            "field": "category",
+            "title": "Category"
+          },
+          {
+            "field": "category_trip_spend",
+            "type": "quantitative",
+            "title": "A$ per trip in this category",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {
+          "field": "market",
+          "type": "nominal",
+          "sort": [
+            "China",
+            "UK",
+            "USA",
+            "New Zealand",
+            "India"
+          ],
+          "axis": {
+            "labelAngle": 0,
+            "labelExpr": "datum.label === 'New Zealand' ? 'NZ' : datum.label"
+          }
+        },
+        "y": {
+          "field": "category",
+          "type": "nominal",
+          "sort": [
+            "Food, drink & stay",
+            "Transport",
+            "Tours",
+            "Shopping",
+            "Entertainment",
+            "Education"
+          ]
+        },
+        "text": {
+          "field": "spend_label"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.category_trip_spend >= 2200",
+            "value": "white"
+          },
+          "value": "#153F50"
+        }
+      }
+    }
+  ]
+}

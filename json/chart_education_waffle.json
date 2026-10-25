@@ -1,0 +1,141 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Waffle (unit) chart: 100 squares, each one per cent of education-related full-trip spending by visitors from five markets; colour shows market of residence.",
+  "width": 320,
+  "height": 320,
+  "config": {
+    "background": "transparent",
+    "font": "Work Sans",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "gridColor": "#e3edf2",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "labelLimit": 150,
+      "tickCount": 5,
+      "labelPadding": 6,
+      "titlePadding": 12
+    },
+    "legend": {
+      "orient": "bottom",
+      "title": null,
+      "columns": 2,
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "padding": 10,
+      "rowPadding": 6,
+      "columnPadding": 22,
+      "labelLimit": 420,
+      "titleLimit": 420,
+      "symbolType": "square",
+      "symbolSize": 170,
+      "titleFontWeight": "bold"
+    },
+    "text": {
+      "font": "Work Sans"
+    }
+  },
+  "data": {
+    "url": "data/education-waffle.json"
+  },
+  "transform": [
+    {
+      "calculate": "datum.market + '  ·  ' + format(datum.share,'.1f') + '%  ·  A$' + format(datum.spend_b,'.2f') + 'b'",
+      "as": "legend_label"
+    },
+    {
+      "calculate": "datum.col + 1",
+      "as": "col2"
+    },
+    {
+      "calculate": "datum.row + 1",
+      "as": "row2"
+    }
+  ],
+  "mark": {
+    "type": "rect",
+    "stroke": "white",
+    "strokeWidth": 3,
+    "cornerRadius": 3
+  },
+  "encoding": {
+    "x": {
+      "field": "col",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          10
+        ]
+      },
+      "axis": null
+    },
+    "x2": {
+      "field": "col2"
+    },
+    "y": {
+      "field": "row",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          10,
+          0
+        ]
+      },
+      "axis": null
+    },
+    "y2": {
+      "field": "row2"
+    },
+    "color": {
+      "field": "legend_label",
+      "type": "nominal",
+      "sort": null,
+      "scale": {
+        "domain": [
+          "China  ·  86.3%  ·  A$4.63b",
+          "India  ·  9.2%  ·  A$0.49b",
+          "USA  ·  2.5%  ·  A$0.13b",
+          "New Zealand  ·  1.4%  ·  A$0.08b",
+          "UK  ·  0.5%  ·  A$0.03b"
+        ],
+        "range": [
+          "#0B6272",
+          "#8DB6E3",
+          "#B5679E",
+          "#3DA27A",
+          "#E0953F"
+        ]
+      },
+      "legend": {
+        "orient": "right",
+        "columns": 1,
+        "title": null,
+        "symbolType": "square",
+        "symbolSize": 260,
+        "labelFontSize": 12,
+        "labelLimit": 300
+      }
+    },
+    "tooltip": [
+      {
+        "field": "market",
+        "title": "Market"
+      },
+      {
+        "field": "share",
+        "title": "Share of education spending (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "spend_b",
+        "title": "Education spending (A$b)",
+        "format": ".2f"
+      }
+    ]
+  }
+}

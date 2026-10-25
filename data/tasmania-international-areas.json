@@ -1,0 +1,26 @@
+[
+  {
+    "region": "Hobart and the South",
+    "spend_m": 563.4033344472068,
+    "nights_k": 2781.2207387143712,
+    "nightly": 202.5741166836121,
+    "longitude": 146.7852009966578,
+    "latitude": -42.68677443026152,
+    "source": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/international-visitor-survey-results-march-quarter-2026.xlsx",
+    "source_cells": "Table 5!F27,G27",
+    "anchor_note": "Geometric centroid of matching tourism region or combined remainder; representative interior point if centroid is outside geometry.",
+    "nightly_label": "A$202.57 / night"
+  },
+  {
+    "region": "Rest of Tasmania (combined)",
+    "spend_m": 195.21219269711028,
+    "nights_k": 2309.1022968964644,
+    "nightly": 84.54029644311736,
+    "longitude": 146.49715435450494,
+    "latitude": -41.54665767524118,
+    "source": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/international-visitor-survey-results-march-quarter-2026.xlsx",
+    "source_cells": "Table 5!F28,G28",
+    "anchor_note": "Geometric centroid of matching tourism region or combined remainder; representative interior point if centroid is outside geometry.",
+    "nightly_label": "A$84.54 / night"
+  }
+]

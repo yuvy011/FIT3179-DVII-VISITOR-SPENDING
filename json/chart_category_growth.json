@@ -1,0 +1,278 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Grouped bars: year-on-year nominal international visitor spending growth, 2024–2025 and 2025–2026. Years refer to years ending March. Calculated from the project category-history.json (TRA IVS Table 8).",
+  "width": 600,
+  "height": 460,
+  "config": {
+    "background": "transparent",
+    "font": "Work Sans",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "gridColor": "#e3edf2",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "labelLimit": 150,
+      "tickCount": 5,
+      "labelPadding": 6,
+      "titlePadding": 12
+    },
+    "legend": {
+      "orient": "bottom",
+      "title": null,
+      "columns": 2,
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "padding": 10,
+      "rowPadding": 6,
+      "columnPadding": 22,
+      "labelLimit": 420,
+      "titleLimit": 420,
+      "symbolType": "square",
+      "symbolSize": 170,
+      "titleFontWeight": "bold"
+    },
+    "text": {
+      "font": "Work Sans"
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "category": "Entertainment",
+        "period": "2024–2025",
+        "growth": 13.426398434750508,
+        "growth_label": "+13%",
+        "start_year": 2024,
+        "end_year": 2025,
+        "spend_start_b": 0.5970858274139731,
+        "spend_b": 0.6772529495999999
+      },
+      {
+        "category": "Entertainment",
+        "period": "2025–2026",
+        "growth": 60.801775199257534,
+        "growth_label": "+61%",
+        "start_year": 2025,
+        "end_year": 2026,
+        "spend_start_b": 0.6772529495999999,
+        "spend_b": 1.0890347655461328
+      },
+      {
+        "category": "Education",
+        "period": "2024–2025",
+        "growth": 12.34710305941531,
+        "growth_label": "+12%",
+        "start_year": 2024,
+        "end_year": 2025,
+        "spend_start_b": 6.270843365906959,
+        "spend_b": 7.045110858989999
+      },
+      {
+        "category": "Education",
+        "period": "2025–2026",
+        "growth": 21.059819190301422,
+        "growth_label": "+21%",
+        "start_year": 2025,
+        "end_year": 2026,
+        "spend_start_b": 7.045110858989999,
+        "spend_b": 8.528798467649585
+      },
+      {
+        "category": "Food, drink & stay",
+        "period": "2024–2025",
+        "growth": 9.250217927547144,
+        "growth_label": "+9%",
+        "start_year": 2024,
+        "end_year": 2025,
+        "spend_start_b": 15.43289360087279,
+        "spend_b": 16.86046989148
+      },
+      {
+        "category": "Food, drink & stay",
+        "period": "2025–2026",
+        "growth": 20.02592857520331,
+        "growth_label": "+20%",
+        "start_year": 2025,
+        "end_year": 2026,
+        "spend_start_b": 16.86046989148,
+        "spend_b": 20.236935549391447
+      },
+      {
+        "category": "Shopping",
+        "period": "2024–2025",
+        "growth": 6.284979123145229,
+        "growth_label": "+6%",
+        "start_year": 2024,
+        "end_year": 2025,
+        "spend_start_b": 3.619572803559258,
+        "spend_b": 3.8470621986099998
+      },
+      {
+        "category": "Shopping",
+        "period": "2025–2026",
+        "growth": 21.269696911807046,
+        "growth_label": "+21%",
+        "start_year": 2025,
+        "end_year": 2026,
+        "spend_start_b": 3.8470621986099998,
+        "spend_b": 4.665320668263047
+      },
+      {
+        "category": "Transport",
+        "period": "2024–2025",
+        "growth": -4.0588562270941875,
+        "growth_label": "−4%",
+        "start_year": 2024,
+        "end_year": 2025,
+        "spend_start_b": 15.914891758223973,
+        "spend_b": 15.26892918306
+      },
+      {
+        "category": "Transport",
+        "period": "2025–2026",
+        "growth": 9.044035586432454,
+        "growth_label": "+9%",
+        "start_year": 2025,
+        "end_year": 2026,
+        "spend_start_b": 15.26892918306,
+        "spend_b": 16.649856572043117
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "category",
+      "type": "nominal",
+      "title": null,
+      "sort": [
+        "Entertainment",
+        "Education",
+        "Food, drink & stay",
+        "Shopping",
+        "Transport"
+      ],
+      "axis": {
+        "labelLimit": 190,
+        "labelFontSize": 13,
+        "labelFontWeight": 600,
+        "ticks": false
+      }
+    },
+    "yOffset": {
+      "field": "period",
+      "type": "nominal",
+      "sort": [
+        "2024–2025",
+        "2025–2026"
+      ]
+    },
+    "x": {
+      "field": "growth",
+      "type": "quantitative",
+      "title": "Year-on-year change in spending",
+      "scale": {
+        "domain": [
+          -10,
+          70
+        ]
+      },
+      "axis": {
+        "values": [
+          0,
+          20,
+          40,
+          60
+        ],
+        "labelExpr": "datum.value > 0 ? '+' + datum.value + '%' : datum.value + '%'",
+        "tickCount": 6
+      }
+    },
+    "color": {
+      "field": "period",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "2024–2025",
+          "2025–2026"
+        ],
+        "range": [
+          "#9CC7D2",
+          "#075D6B"
+        ]
+      },
+      "legend": {
+        "title": "Period",
+        "orient": "bottom",
+        "columns": 2,
+        "direction": "horizontal"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "category",
+        "title": "Category"
+      },
+      {
+        "field": "period",
+        "title": "Period (years ending March)"
+      },
+      {
+        "field": "growth",
+        "type": "quantitative",
+        "title": "Year-on-year change (%)",
+        "format": "+.2f"
+      },
+      {
+        "field": "start_year",
+        "type": "ordinal",
+        "title": "Baseline year"
+      },
+      {
+        "field": "spend_start_b",
+        "type": "quantitative",
+        "title": "Baseline spending (A$b)",
+        "format": ".2f"
+      },
+      {
+        "field": "spend_b",
+        "type": "quantitative",
+        "title": "Period-end spending (A$b)",
+        "format": ".2f"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#153F50",
+        "align": {
+          "expr": "datum.growth < 0 ? 'right' : 'left'"
+        },
+        "dx": {
+          "expr": "datum.growth < 0 ? -6 : 6"
+        }
+      },
+      "encoding": {
+        "text": {
+          "field": "growth_label"
+        },
+        "color": {
+          "value": "#153F50"
+        }
+      }
+    }
+  ]
+}

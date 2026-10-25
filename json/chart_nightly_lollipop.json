@@ -1,0 +1,169 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 500,
+  "config": {
+    "background": "transparent",
+    "font": "Work Sans",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "gridColor": "#e3edf2",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "labelLimit": 150,
+      "tickCount": 5,
+      "labelPadding": 6,
+      "titlePadding": 12
+    },
+    "legend": {
+      "orient": "bottom",
+      "title": null,
+      "columns": 2,
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "padding": 10,
+      "rowPadding": 6,
+      "columnPadding": 22,
+      "labelLimit": 420,
+      "titleLimit": 420,
+      "symbolType": "square",
+      "symbolSize": 170,
+      "titleFontWeight": "bold"
+    },
+    "text": {
+      "font": "Work Sans"
+    }
+  },
+  "data": {
+    "url": "data/nightly-change.json"
+  },
+  "encoding": {
+    "y": {
+      "field": "state",
+      "type": "nominal",
+      "title": null,
+      "sort": "-x"
+    },
+    "x": {
+      "field": "change",
+      "type": "quantitative",
+      "title": "Change in A$ per visitor night",
+      "scale": {
+        "domain": [
+          -10,
+          25
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "state",
+        "type": "nominal",
+        "title": "State"
+      },
+      {
+        "field": "change",
+        "type": "quantitative",
+        "title": "Change (A$ per night)",
+        "format": "+.1f"
+      },
+      {
+        "field": "previous",
+        "type": "quantitative",
+        "title": "2025 A$ per night",
+        "format": ".1f"
+      },
+      {
+        "field": "current",
+        "type": "quantitative",
+        "title": "2026 A$ per night",
+        "format": ".1f"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "x2": {
+          "datum": 0
+        },
+        "color": {
+          "field": "direction",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Spend per night rose",
+              "Spend per night fell"
+            ],
+            "range": [
+              "#0A737D",
+              "#C0684A"
+            ]
+          },
+          "legend": {
+            "title": "2025 to 2026",
+            "orient": "bottom",
+            "columns": 2,
+            "direction": "horizontal"
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 110,
+        "opacity": 1
+      },
+      "encoding": {
+        "color": {
+          "field": "direction",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Spend per night rose",
+              "Spend per night fell"
+            ],
+            "range": [
+              "#0A737D",
+              "#C0684A"
+            ]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -13,
+        "fontSize": 11,
+        "fontWeight": 600,
+        "color": "#173d47"
+      },
+      "encoding": {
+        "text": {
+          "field": "change",
+          "type": "quantitative",
+          "format": "+.1f"
+        }
+      }
+    }
+  ],
+  "description": "Signed lollipop chart. Warm terracotta indicates a decline, teal indicates an increase. Distances encode A$ change in average visitor spending per night.",
+  "transform": [
+    {
+      "calculate": "datum.change < 0 ? 'Spend per night fell' : 'Spend per night rose'",
+      "as": "direction"
+    }
+  ]
+}

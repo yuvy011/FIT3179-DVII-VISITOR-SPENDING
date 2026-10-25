@@ -1,0 +1,130 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 320,
+  "data": {
+    "url": "data/education-spending-exact.json"
+  },
+  "transform": [
+    {
+      "calculate": "format(datum.education_share,'.2%') + ' \u00b7 A$' + format(datum.spend_m,',.1f') + 'm'",
+      "as": "label"
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "market",
+      "type": "nominal",
+      "sort": [
+        "China",
+        "India",
+        "USA",
+        "New Zealand",
+        "UK"
+      ],
+      "axis": {
+        "title": null,
+        "labelPadding": 8,
+        "labelLimit": 110
+      }
+    },
+    "x": {
+      "field": "education_share",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          1.15
+        ],
+        "zero": true
+      },
+      "axis": {
+        "title": "Share of education spending across these five markets",
+        "format": ".0%",
+        "values": [
+          0,
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "market",
+        "title": "Market"
+      },
+      {
+        "field": "education_share",
+        "type": "quantitative",
+        "format": ".2%",
+        "title": "Share of five-market education spending"
+      },
+      {
+        "field": "spend_m",
+        "type": "quantitative",
+        "format": ",.2f",
+        "title": "Education expenditure (A$ million)"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "size": 32,
+        "opacity": 1
+      },
+      "encoding": {
+        "color": {
+          "field": "market",
+          "scale": {
+            "domain": [
+              "China",
+              "UK",
+              "USA",
+              "New Zealand",
+              "India"
+            ],
+            "range": [
+              "#0B6272",
+              "#E0953F",
+              "#B5679E",
+              "#3DA27A",
+              "#8DB6E3"
+            ]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#153F50"
+      },
+      "encoding": {
+        "text": {
+          "field": "label"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Work Sans",
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    }
+  }
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "fy_start": 2016,
+    "year": "2016\u201317",
+    "group": "Domestic",
+    "spend": 91.3
+  },
+  {
+    "fy_start": 2016,
+    "year": "2016\u201317",
+    "group": "International",
+    "spend": 32.7
+  },
+  {
+    "fy_start": 2017,
+    "year": "2017\u201318",
+    "group": "Domestic",
+    "spend": 99.2
+  },
+  {
+    "fy_start": 2017,
+    "year": "2017\u201318",
+    "group": "International",
+    "spend": 35.0
+  },
+  {
+    "fy_start": 2018,
+    "year": "2018\u201319",
+    "group": "Domestic",
+    "spend": 110.5
+  },
+  {
+    "fy_start": 2018,
+    "year": "2018\u201319",
+    "group": "International",
+    "spend": 37.1
+  },
+  {
+    "fy_start": 2019,
+    "year": "2019\u201320",
+    "group": "Domestic",
+    "spend": 95.7
+  },
+  {
+    "fy_start": 2019,
+    "year": "2019\u201320",
+    "group": "International",
+    "spend": 28.0
+  },
+  {
+    "fy_start": 2020,
+    "year": "2020\u201321",
+    "group": "Domestic",
+    "spend": 93.0
+  },
+  {
+    "fy_start": 2020,
+    "year": "2020\u201321",
+    "group": "International",
+    "spend": 1.0
+  },
+  {
+    "fy_start": 2021,
+    "year": "2021\u201322",
+    "group": "Domestic",
+    "spend": 109.8
+  },
+  {
+    "fy_start": 2021,
+    "year": "2021\u201322",
+    "group": "International",
+    "spend": 5.6
+  },
+  {
+    "fy_start": 2022,
+    "year": "2022\u201323",
+    "group": "Domestic",
+    "spend": 159.3
+  },
+  {
+    "fy_start": 2022,
+    "year": "2022\u201323",
+    "group": "International",
+    "spend": 27.1
+  },
+  {
+    "fy_start": 2023,
+    "year": "2023\u201324",
+    "group": "Domestic",
+    "spend": 165.7
+  },
+  {
+    "fy_start": 2023,
+    "year": "2023\u201324",
+    "group": "International",
+    "spend": 38.4
+  },
+  {
+    "fy_start": 2024,
+    "year": "2024\u201325",
+    "group": "Domestic",
+    "spend": 168.8
+  },
+  {
+    "fy_start": 2024,
+    "year": "2024\u201325",
+    "group": "International",
+    "spend": 42.3
+  }
+]

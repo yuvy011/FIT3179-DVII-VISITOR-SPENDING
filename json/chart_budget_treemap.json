@@ -1,0 +1,202 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 800,
+  "height": 440,
+  "padding": 3,
+  "background": "transparent",
+  "data": [
+    {
+      "name": "tree",
+      "url": "data/budget-tree.json",
+      "transform": [
+        {
+          "type": "stratify",
+          "key": "id",
+          "parentKey": "parent"
+        },
+        {
+          "type": "treemap",
+          "field": "value",
+          "sort": {
+            "field": "value",
+            "order": "descending"
+          },
+          "method": "binary",
+          "size": [
+            {
+              "signal": "width"
+            },
+            {
+              "signal": "height"
+            }
+          ],
+          "paddingInner": 0.1
+        }
+      ]
+    },
+    {
+      "name": "leaves",
+      "source": "tree",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.depth === 1"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "amount",
+      "type": "threshold",
+      "domain": [3, 6, 12, 18],
+      "range": ["#E6F3F4", "#A9D3D9", "#5AA5B0", "#2C7B89", "#0A4F5C"]
+    },
+    {
+      "name": "legendSteps",
+      "type": "threshold",
+      "domain": [1, 2, 3, 4],
+      "range": ["#E6F3F4", "#A9D3D9", "#5AA5B0", "#2C7B89", "#0A4F5C"]
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "field": "x0"
+          },
+          "y": {
+            "field": "y0"
+          },
+          "x2": {
+            "field": "x1"
+          },
+          "y2": {
+            "field": "y1"
+          },
+          "fill": {
+            "scale": "amount",
+            "field": "value"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 2
+          },
+          "tooltip": {
+            "signal": "{'Category':datum.id,'Full trip spend (A$b)':format(datum.value,'.2f'),'Budget share':format(datum.share,'.1%')}"
+          }
+        },
+        "hover": {
+          "stroke": {
+            "value": "#002f44"
+          },
+          "strokeWidth": {
+            "value": 3
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "(datum.x0+datum.x1)/2"
+          },
+          "y": {
+            "signal": "(datum.y0+datum.y1)/2-14"
+          },
+          "text": {
+            "field": "label"
+          },
+          "lineBreak": {
+            "value": "\n"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "font": {
+            "value": "Work Sans"
+          },
+          "fontSize": {
+            "signal": "width < 450 ? 10 : 13"
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "limit": {
+            "signal": "datum.x1-datum.x0-10"
+          },
+          "fill": {
+            "signal": "datum.value >= 12 ? 'white' : '#153F50'"
+          },
+          "lineHeight": {
+            "value": 14
+          },
+          "opacity": {
+            "signal": "datum.x1-datum.x0 > 70 ? 1 : 0"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "(datum.x0+datum.x1)/2"
+          },
+          "y": {
+            "signal": "(datum.y0+datum.y1)/2+(datum.id==='Food, drink & stay' ? 24 : 13)"
+          },
+          "text": {
+            "signal": "'$'+format(datum.value,'.1f')+'b'"
+          },
+          "align": {
+            "value": "center"
+          },
+          "font": {
+            "value": "Work Sans"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fill": {
+            "signal": "datum.value >= 12 ? 'white' : '#153F50'"
+          },
+          "opacity": {
+            "signal": "datum.y1-datum.y0 > 40 ? 1 : 0"
+          }
+        }
+      }
+    }
+  ],
+
+  "legends": [{
+  "fill": "legendSteps", "type": "gradient",
+  "orient": "bottom", "direction": "horizontal",
+  "title": "Spending (A$ billion)", "titleFont": "Work Sans", "titleFontSize": 11, "titlePadding": 8,
+  "gradientLength": 300, "gradientThickness": 14,
+  "gradientStrokeColor": "#000000", "gradientStrokeWidth": 0.1,
+  "values": [0, 1, 2, 3, 4],
+  "labelFont": "Work Sans", "labelFontSize": 11,
+  "encode": { "labels": { "update": {
+    "text": { "signal": "['1','3','6','10','>18'][datum.value]" } } } }
+}]
+}

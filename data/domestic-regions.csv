@@ -1,0 +1,12 @@
+region,visitors_k,nights_k,spend_m,spend_b,nightly,longitude,latitude,source,location_method
+Brisbane,9740,27228,8850.2,8.850200000000001,325.0403995886588,152.681107,-27.60934,TEQ DoTS March 2026 regional overnight table / regOvernight,Interior point of official TRA 2026 region boundary (Australian Albers)
+Gold Coast,5157,16376,5612.2,5.6122,342.70884220810944,153.30798,-27.969753,TEQ DoTS March 2026 regional overnight table / regOvernight,Interior point of official TRA 2026 region boundary (Australian Albers)
+Sunshine Coast,4316,13012,3487.9,3.4879000000000002,268.05256686135874,152.609423,-26.343137,TEQ DoTS March 2026 regional overnight table / regOvernight,Interior point of official TRA 2026 region boundary (Australian Albers)
+Tropical North Queensland,1746,7047,2843.4,2.8434,403.49084716900813,143.440787,-15.180915,TEQ DoTS March 2026 regional overnight table / regOvernight,Interior point of official TRA 2026 region boundary (Australian Albers)
+Queensland Country,2993,7829,1350.8,1.3508,172.53799974453955,151.11186,-27.363478,TEQ DoTS March 2026 regional overnight table / regOvernight,Interior point of official TRA 2026 region boundary (Australian Albers)
+Southern Great Barrier Reef,1941,6304,1438.4,1.4384000000000001,228.17258883248732,151.07533,-24.047543,TEQ DoTS March 2026 regional overnight table / regOvernight,Interior point of official TRA 2026 region boundary (Australian Albers)
+Townsville,1023,3684,1167.6,1.1676,316.9381107491856,146.152224,-20.133753,TEQ DoTS March 2026 regional overnight table / regOvernight,Interior point of official TRA 2026 region boundary (Australian Albers)
+Whitsundays,688,2455,887.7,0.8877,361.58859470468434,147.735303,-20.683282,TEQ DoTS March 2026 regional overnight table / regOvernight,Interior point of official TRA 2026 region boundary (Australian Albers)
+Mackay,1023,3375,825.1,0.8251000000000001,244.47407407407408,147.766853,-22.151027,TEQ DoTS March 2026 regional overnight table / regOvernight,Interior point of official TRA 2026 region boundary (Australian Albers)
+Fraser Coast,856,2594,519.8,0.5197999999999999,200.38550501156513,152.457015,-25.601524,TEQ DoTS March 2026 regional overnight table / regOvernight,Interior point of official TRA 2026 region boundary (Australian Albers)
+Outback Queensland,590,1927,336.7,0.3367,174.72755578619615,142.631769,-24.228291,TEQ DoTS March 2026 regional overnight table / regOvernight,Interior point of official TRA 2026 region boundary (Australian Albers)

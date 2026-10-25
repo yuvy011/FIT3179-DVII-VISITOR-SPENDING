@@ -1,0 +1,179 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Waterfall bridge between two published survey scopes: total trip spending and spending in Australia. The scope difference is subtraction, not an observed expense category or country split.",
+  "width": 900,
+  "height": 340,
+  "config": {
+    "background": "transparent",
+    "font": "Work Sans",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "gridColor": "#e3edf2",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "labelLimit": 150,
+      "tickCount": 5,
+      "labelPadding": 6,
+      "titlePadding": 12
+    },
+    "legend": {
+      "orient": "bottom",
+      "title": null,
+      "columns": 2,
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "padding": 10,
+      "rowPadding": 6,
+      "columnPadding": 18
+    },
+    "text": {
+      "font": "Work Sans"
+    }
+  },
+  "data": {
+    "url": "data/spending-scope.json"
+  },
+  "encoding": {
+    "x": {
+      "field": "step",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0.5,
+          3.5
+        ],
+        "nice": false
+      },
+      "axis": {
+        "values": [
+          1,
+          2,
+          3
+        ],
+        "labelExpr": "datum.value === 1 ? ['Full trip','budget'] : datum.value === 2 ? ['Difference'] : ['Spent in','Australia']",
+        "labelAngle": 0,
+        "title": null,
+        "grid": false,
+        "ticks": false,
+        "labelOverlap": false,
+        "labelLineHeight": 15
+      }
+    },
+    "y": {
+      "field": "end",
+      "type": "quantitative",
+      "title": "Nominal A$ billion",
+      "scale": {
+        "domain": [
+          0,
+          65
+        ]
+      }
+    },
+    "y2": {
+      "field": "start"
+    },
+    "tooltip": [
+      {
+        "field": "kind",
+        "title": "Measure"
+      },
+      {
+        "field": "amount_b",
+        "type": "quantitative",
+        "title": "A$ billion",
+        "format": ".2f"
+      },
+      {
+        "field": "source_cells",
+        "title": "IVS Table 1 cells"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "size": 100,
+        "cornerRadius": 2
+      },
+      "encoding": {
+        "color": {
+          "field": "step",
+          "type": "ordinal",
+          "scale": {
+            "domain": [
+              1,
+              2,
+              3
+            ],
+            "range": [
+              "#72bdc4",
+              "#cbdcde",
+              "#075d6b"
+            ]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 1,
+            "x2": 2,
+            "level": 57.57450092789036
+          },
+          {
+            "x": 2,
+            "x2": 3,
+            "level": 40.897544156043054
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "strokeDash": [
+          4,
+          4
+        ],
+        "color": "#8daeb4"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "x2"
+        },
+        "y": {
+          "field": "level",
+          "type": "quantitative"
+        },
+        "y2": null,
+        "tooltip": null
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -12,
+        "fontSize": 15,
+        "fontWeight": "bold",
+        "color": "#153F50"
+      },
+      "encoding": {
+        "text": {
+          "field": "display"
+        },
+        "y2": null
+      }
+    }
+  ]
+}
